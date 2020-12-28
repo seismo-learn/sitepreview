@@ -1,0 +1,60 @@
+name: Cleanup gh-pages
+
+on:
+  # Enable "pull_request" for testing
+  # pull_request:
+  # monthly jobs
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  cleanup:
+    name: Cleanup gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the gh-pages branch
+        uses: actions/checkout@v2.3.1
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      - name: Install markdown tool
+        run: |
+          sudo apt-get update
+          sudo apt-get install markdown
+
+      - name: Cleanup, squash and push
+        run: |
+          # Delete branches/directories if no changes in 4 weeks (28 days)
+          for branch in $(find seismo-learn -mindepth 2 -maxdepth 2); do
+            if [ $(find $branch -mtime -28 | wc -l) == 0 ]; then
+              rm -rvf $branch
+            fi
+          done
+
+          # Make some changes
+          touch .nojekyll
+
+          # generate TOC
+          echo "## List of documentation for preview:" > index.md
+          for branch in $(find seismo-learn -mindepth 2 -maxdepth 2); do
+            echo "- [$branch](https://seismo-learn.org/sitepreview/$branch)" >> index.md
+          done
+          # convert index.md to index.html
+          markdown index.md > index.html
+          rm -f index.md
+
+          # Configure git to be the GitHub Actions account
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          # Commit changes
+          git add -A .
+          git status
+          git commit --allow-empty -m "Commit changes"
+
+          # Squash all commits into one
+          git reset $(git commit-tree HEAD^{tree} -m "Autosquash all commits by scheduled jobs")
+
+          # Push changes
+          git push -fq origin gh-pages 2>&1 > /dev/null
