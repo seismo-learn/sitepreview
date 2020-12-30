@@ -1,5 +1,7 @@
 # sitepreview
 
+![GitHub repo size](https://img.shields.io/github/repo-size/seismo-learn/sitepreview)
+
 The `gh-pages` branch of this repository hosts the documentation from PRs
 of other repositories, so that we can preview the changes in PRs.
 
