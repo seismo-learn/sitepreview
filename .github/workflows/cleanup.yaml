@@ -3,9 +3,9 @@ name: Cleanup gh-pages
 on:
   # Enable "pull_request" for testing
   # pull_request:
-  # monthly jobs
+  # daily jobs
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: '0 0 * * *'
 
 jobs:
   cleanup:
@@ -26,10 +26,15 @@ jobs:
 
       - name: Cleanup, squash and push
         run: |
-          # Delete branches/directories if no changes in 4 weeks (28 days)
-          for branch in $(find seismo-learn -mindepth 2 -maxdepth 2); do
-            if [ $(find $branch -mtime -28 | wc -l) == 0 ]; then
-              rm -rvf $branch
+          # delete the documentation if the corresponding branch is deleted
+          for dir in $(find seismo-learn -mindepth 2 -maxdepth 2); do
+            # directory is "user/repository/branch"
+            repo=$(dirname $dir)
+            branch=$(basename $dir)
+            # the "git ls-remote" command return nothing if a branch is not found
+            if [[ ! $(git ls-remote --heads https://github.com/${repo} ${branch}) ]]; then
+              echo "Deleting directory $dir..."
+              rm -rvf $dir
             fi
           done
 

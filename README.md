@@ -12,6 +12,14 @@ push the documentation to the `gh-pages` branch of this repository.
 
 The URL scheme is:
 
-	https://seismo-learn.org/sitepreview/seismo-learn/<repository_name>/<PR_branch_name>
+    https://seismo-learn.org/sitepreview/seismo-learn/<repository_name>/<PR_branch_name>
 
 See https://github.com/seismo-learn/software/pull/29 for the workflow changes.
+
+## Cleanup
+
+The [workflow](.github/workflows/cleanup.yaml) runs daily to:
+
+1. Delete the documentation if the corresponding branch was deleted
+2. Generate a index file, listing all current documentations
+3. Squash all commits into one to avoid increasing repository size
