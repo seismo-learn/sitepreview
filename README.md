@@ -22,5 +22,5 @@ See https://github.com/seismo-learn/software/pull/29 for the workflow changes.
 The [workflow](.github/workflows/cleanup.yaml) runs daily to:
 
 1. Delete the documentation if the corresponding branch was deleted
-2. Generate a index file, listing all current documentations
-3. Squash all commits into one to avoid increasing repository size
+2. Generate an index file, which lists all current documentations
+3. Squash all commits into one commit to avoid increasing repository size
