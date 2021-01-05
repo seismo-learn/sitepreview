@@ -1,4 +1,4 @@
-name: Cleanup gh-pages
+name: CI
 
 on:
   # Enable "pull_request" for testing
