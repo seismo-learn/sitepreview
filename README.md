@@ -8,8 +8,8 @@ of other repositories, so that we can preview the changes in PRs.
 
 ## How does it work
 
-PRs of other repositories can run workflow, generate the documentation, and
-push the documentation to the `gh-pages` branch of this repository.
+PRs of other repositories can run a workflow and push the generated documentation
+to the `gh-pages` branch of this repository.
 
 The URL scheme is:
 
@@ -21,6 +21,6 @@ See https://github.com/seismo-learn/software/pull/29 for the workflow changes.
 
 The [workflow](.github/workflows/cleanup.yaml) runs daily to:
 
-1. Delete the documentation if the corresponding branch was deleted
-2. Generate an index file, which lists all current documentations
+1. Delete the documentation if the corresponding branch was already deleted
+2. Generate an index file, which lists all documentations of current open PRs
 3. Squash all commits into one commit to avoid increasing repository size
