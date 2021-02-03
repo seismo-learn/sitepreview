@@ -6,17 +6,16 @@
 The `gh-pages` branch of this repository hosts the documentation from PRs
 of other repositories, so that we can preview the changes in PRs.
 
-## How does it work
+## How it works
 
-PRs of other repositories can run a workflow and push the generated documentation
-to the `gh-pages` branch of this repository.
+The [`preview-pr.yml`](https://github.com/seismo-learn/seismology101/blob/main/.github/workflows/preview-pr.yml)
+workflow is triggered in PRs. It builds and pushes the documentatation to the
+to the `gh-pages` branch of this repository, and creates/updates a comment
+with the preview URL link.
 
 The URL scheme is:
 
     https://seismo-learn.org/sitepreview/seismo-learn/<repository_name>/<PR_branch_name>
-
-See [`preview-pr.yml`](https://github.com/seismo-learn/seismology101/blob/main/.github/workflows/preview-pr.yml)
-for the workflow that pushes documentation to this repository.
 
 ## Cleanup
 
