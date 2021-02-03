@@ -15,7 +15,8 @@ The URL scheme is:
 
     https://seismo-learn.org/sitepreview/seismo-learn/<repository_name>/<PR_branch_name>
 
-See https://github.com/seismo-learn/software/pull/29 for the workflow changes.
+See [`preview-pr.yml`](https://github.com/seismo-learn/seismology101/blob/main/.github/workflows/preview-pr.yml)
+for the workflow that pushes documentation to this repository.
 
 ## Cleanup
 
