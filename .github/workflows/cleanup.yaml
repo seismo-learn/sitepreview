@@ -1,4 +1,4 @@
-name: CI
+name: Clean up
 
 on:
   # Enable "pull_request" for testing
