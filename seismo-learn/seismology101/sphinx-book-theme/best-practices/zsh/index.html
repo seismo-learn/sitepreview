@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>Zsh 及其配置 &#8212; 地震“学”科研入门教程</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="prev" title="备份与还原" href="../backup/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../">
+  
+  
+  <h1 class="site-logo" id="site-title">地震“学”科研入门教程</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p>
+ <span class="caption-text">
+  计算机基础
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../computer/operating-system/">
+   选择操作系统
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computer/setup/">
+   配置操作系统
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/fedora-setup/">
+     Fedora 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/ubuntu-setup/">
+     Ubuntu 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/macos-setup/">
+     macOS 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/wsl-setup/">
+     WSL 配置指南
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computer/linux101/">
+   Linux 入门
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/command-line/">
+     命令行
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/file-operations/">
+     文件操作
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/shell/">
+     Shell 基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computer/environment-variable/">
+     环境变量
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../computer/commands/">
+   常用命令
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../computer/editor/">
+   编辑器
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  编程基础
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../programming/introduction/">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../programming/languages/">
+   编程语言
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../programming/bash/">
+     Bash 脚本
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../programming/python/">
+     Python 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../programming/c/">
+     C 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../programming/fortran/">
+     Fortran 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../programming/markdown/">
+     Markdown
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../programming/compile/">
+   编译与链接
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../programming/version-control/">
+   版本控制
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  地震学基础
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismology/introduction/">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismology/seismic-source/">
+   震源
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismology/seismic-wave/">
+   地震波
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismology/seismograph/">
+   地震仪
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../seismology/seismogram/">
+   地震图
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../seismology/seismogram/data-format/">
+     波形数据格式
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismology/software/">
+   常用软件
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  地震学实践
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../exercises/waveform-fetch/">
+   波形数据下载
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  实践经验
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../file-organization/">
+   文件管理
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software-installation/">
+   软件安装
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../backup/">
+   备份与还原
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Zsh 及其配置
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/best-practices/zsh.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/seismo-learn/seismology101"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/seismo-learn/seismology101/issues/new?title=Issue%20on%20page%20%2Fbest-practices/zsh.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/seismo-learn/seismology101/edit/master/best-practices/zsh.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   安装 Zsh
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oh-my-zsh">
+   Oh My Zsh
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     设置主题
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     启用插件
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="zsh">
+<h1>Zsh 及其配置<a class="headerlink" href="#zsh" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">本节贡献者</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、
+<a class="reference external" href="https://github.com/core-man">姚家园</a>（作者）</p>
+</dd>
+<dt class="field-even">最近更新日期</dt>
+<dd class="field-even"><p>2021-01-21</p>
+</dd>
+<dt class="field-odd">预计阅读时间</dt>
+<dd class="field-odd"><p>20 分钟</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Linux 下有很多 Shell，最常见的是 Bash，此外还有 Zsh、csh、ksh。推荐使用 Zsh。</p>
+<p>Zsh 有如下特点：</p>
+<ul class="simple">
+<li><p>语法基本完全兼容于 Bash，一般用户完全体会不到其区别</p></li>
+<li><p>Zsh 提供命令补全特性，比 Bash 的补全要更好用</p></li>
+<li><p>可配置性强</p></li>
+</ul>
+<section id="id1">
+<h2>安装 Zsh<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>在终端键入 <code class="docutils literal notranslate"><span class="pre">zsh</span> <span class="pre">--version</span></code>，若显示 Zsh 版本号，则表示 Zsh
+已安装。否则需要安装 Zsh。</p>
+<p>自 macOS Catalina（10.15）开始，macOS 系统默认的 Shell 已由 Bash 变为 Zsh。</p>
+<p>Linux 用户可以使用如下命令安装 Zsh：</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e1fe5162-5f8c-4cdb-ba5d-53a7b51ee910" name="f31ff7d2-fb23-4c68-a26c-2b28758138ab" type="radio">
+</input><label class="tabbed-label" for="e1fe5162-5f8c-4cdb-ba5d-53a7b51ee910">
+Fedora</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install zsh
+</pre></div>
+</div>
+</div>
+<input id="a8a77b3d-e7b2-415c-83b3-f57d32e08578" name="f31ff7d2-fb23-4c68-a26c-2b28758138ab" type="radio">
+</input><label class="tabbed-label" for="a8a77b3d-e7b2-415c-83b3-f57d32e08578">
+CentOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo yum install zsh
+</pre></div>
+</div>
+</div>
+<input id="2b3a77a8-f83c-45c8-9c7c-ffb13ab35b0c" name="f31ff7d2-fb23-4c68-a26c-2b28758138ab" type="radio">
+</input><label class="tabbed-label" for="2b3a77a8-f83c-45c8-9c7c-ffb13ab35b0c">
+Ubuntu/Debian</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install zsh
+</pre></div>
+</div>
+</div>
+</div>
+<p>通过如下命令设置默认 Shell 为 Zsh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chsh -s $(which zsh)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">chsh</span></code> 命令修改的是登陆 Shell，因而需要退出当前用户并重新登陆，用户的默认 Shell 就从 Bash 变成 Zsh 了。打开新的终端并键入
+<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>，查看当前 Shell，会显示 <code class="file docutils literal notranslate"><span class="pre">/bin/zsh</span></code>。</p>
+<p>Zsh 的配置文件为 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code>。因而切换到 Zsh 后，所有的 Shell 配置都不用写到 <code class="file docutils literal notranslate"><span class="pre">~/.bashrc</span></code>，而要写到 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code> 中。</p>
+</section>
+<section id="oh-my-zsh">
+<h2>Oh My Zsh<a class="headerlink" href="#oh-my-zsh" title="永久链接至标题">¶</a></h2>
+<p>Zsh 稍作配置会更加方便好用。<a class="reference external" href="https://ohmyz.sh/">Oh My Zsh</a> 是由 Oh My Zsh 社区维护的一套 Zsh 配置文件，使用起来非常方便。一般用户直接使用该配置即可。</p>
+<p>安装 Oh My Zsh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
+</pre></div>
+</div>
+<p>该命令会创建 <code class="file docutils literal notranslate"><span class="pre">~/.oh-my-zsh</span></code> 目录，下载 Oh My Zsh 到该目录下，生成默认的 Zsh 配置文件
+<code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code>，并备份老的配置到类似 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc.pre-oh-my-zsh</span></code> 的文件中。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>GitHub 在国内访问不畅，以上安装命令可能会由于网络问题而失败。若以上命令失败，可直接打开脚本链接 <a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh">https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh</a>，复制脚本内容到文本编辑器中（如 Visual Studio Code），保存到本地某目录下（如 <code class="file docutils literal notranslate"><span class="pre">~/Downloads</span></code> 目录）。然后进入该目录，运行脚本即可:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd ~/Downloads
+$ sh install.sh
+</pre></div>
+</div>
+</div>
+<p>之后可以根据个人习惯修改配置文件 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code>，如<a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh#themes">设置主题</a>、<a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh#plugins">启用插件</a>等。</p>
+<section id="id2">
+<h3>设置主题<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>修改配置文件 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code> 便可以使用不同的主题:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ZSH_THEME</span><span class="o">=</span><span class="s2">&quot;bira&quot;</span>
+</pre></div>
+</div>
+<p>打开新的终端，查看主题效果。</p>
+<p>Oh My Zsh 自带了很多主题，位于 <code class="file docutils literal notranslate"><span class="pre">~/.oh-my-zsh/themes</span></code>目录下，可以在线<a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">预览主题效果</a>。用户也可以使用<a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes">外部主题</a>。</p>
+</section>
+<section id="id3">
+<h3>启用插件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>一般直接修改配置文件 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code> 便可启用插件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="o">=</span><span class="p">(</span>
+  <span class="n">sudo</span>
+  <span class="n">extract</span>
+  <span class="n">autojump</span>
+  <span class="n">zsh</span><span class="o">-</span><span class="n">autosuggestions</span>
+  <span class="n">zsh</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Oh My Zsh 自带了很多插件，位于 <code class="file docutils literal notranslate"><span class="pre">~/.oh-my-zsh/plugins</span></code>目录下，也可以<a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins-Overview">在线查询</a>。这里推荐几个常用的自带插件。</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo">sudo 插件</a>：按两下 <kbd class="kbd docutils literal notranslate">ESC</kbd> 即可在当前命令前加上 <code class="docutils literal notranslate"><span class="pre">sudo</span></code></p></li>
+<li><p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract">extract 插件</a>：使用 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">abc.zip</span></code> 语法即可解压几乎所有压缩文件，如 <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>、<code class="docutils literal notranslate"><span class="pre">.tar.bz2</span></code>、<code class="docutils literal notranslate"><span class="pre">.zip</span></code>、
+<code class="docutils literal notranslate"><span class="pre">.7z</span></code>、<code class="docutils literal notranslate"><span class="pre">.rar</span></code> 等</p></li>
+<li><p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump">autojump 插件</a>：非常智能的目录快速切换工具</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pwd
+/home/seismo-learn
+$ cd Desktop
+$ cd /opt
+$ cd /usr/local
+
+# 用 j 命令迅速从 /usr/local 跳转到与 des 匹配的目录，这里只有 Desktop 可以匹配
+$ j des
+$ pwd
+/home/seismo-learn/Desktop
+</pre></div>
+</div>
+<p>启用 autojump 插件前，需提前安装 <a class="reference external" href="https://github.com/wting/autojump">autojump</a>:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f5eb4472-64ba-4023-b52b-8e4e70d8b73b" name="403697fc-6691-41e1-9747-b4bc359756bf" type="radio">
+</input><label class="tabbed-label" for="f5eb4472-64ba-4023-b52b-8e4e70d8b73b">
+Fedora</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install autojump-zsh
+</pre></div>
+</div>
+</div>
+<input id="b6958cbb-7f3f-4936-a17f-09546aca4a67" name="403697fc-6691-41e1-9747-b4bc359756bf" type="radio">
+</input><label class="tabbed-label" for="b6958cbb-7f3f-4936-a17f-09546aca4a67">
+CentOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo yum install autojump-zsh
+</pre></div>
+</div>
+</div>
+<input id="1cd1d5e4-3955-4361-881f-0695db66fc67" name="403697fc-6691-41e1-9747-b4bc359756bf" type="radio">
+</input><label class="tabbed-label" for="1cd1d5e4-3955-4361-881f-0695db66fc67">
+Ubuntu/Debian</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 安装后，还要根据 /usr/share/doc/autojump/README.Debian 里的要求做进一步设置
+$ sudo apt install autojump
+</pre></div>
+</div>
+</div>
+<input id="34da3a88-dce3-4f45-af47-abba55c8b7b1" name="403697fc-6691-41e1-9747-b4bc359756bf" type="radio">
+</input><label class="tabbed-label" for="34da3a88-dce3-4f45-af47-abba55c8b7b1">
+macOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ brew install autojump
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git">git 插件</a>为 git 的众多常用命令提供了更简单的别名。其中，<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">mergetool</span> <span class="pre">--no-prompt</span></code> 的别名是 <code class="docutils literal notranslate"><span class="pre">gmt</span></code>，与地学软件 GMT 冲突，建议不启用该插件。</p>
+</div>
+</li>
+</ul>
+<p>除了 Oh My Zsh 自带的插件，还可以使用第三方插件，只需提前安装即可。这里推荐几个常用的。</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions 插件</a>：命令自动补全插件，当输入命令的几个字母，它会自动根据历史输入进行自动补全</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference external" href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting 插件</a>：高亮 Zsh 可用命令</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+</pre></div>
+</div>
+<p>该插件需要位于配置文件 <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code> 中的插件列表的最后一位:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="o">=</span><span class="p">([</span><span class="n">plugins</span><span class="o">...</span><span class="p">]</span> <span class="n">zsh</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>某些主题下，一些插件可能无法正常使用。</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../backup/" title="previous page">备份与还原</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By seismo-learn<br/>
+        
+            &copy; Copyright 2020–2021, seismo-learn.<br/>
+          Last updated on 2021 年 04 月 03 日.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

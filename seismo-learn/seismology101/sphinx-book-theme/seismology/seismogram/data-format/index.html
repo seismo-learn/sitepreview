@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>波形数据格式 &#8212; 地震“学”科研入门教程</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex/" />
+    <link rel="search" title="搜索" href="../../../search/" />
+    <link rel="next" title="常用软件" href="../../software/" />
+    <link rel="prev" title="地震图" href="../" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../">
+  
+  
+  <h1 class="site-logo" id="site-title">地震“学”科研入门教程</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p>
+ <span class="caption-text">
+  计算机基础
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../computer/operating-system/">
+   选择操作系统
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../computer/setup/">
+   配置操作系统
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/fedora-setup/">
+     Fedora 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/ubuntu-setup/">
+     Ubuntu 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/macos-setup/">
+     macOS 配置指南
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/wsl-setup/">
+     WSL 配置指南
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../computer/linux101/">
+   Linux 入门
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/command-line/">
+     命令行
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/file-operations/">
+     文件操作
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/shell/">
+     Shell 基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computer/environment-variable/">
+     环境变量
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../computer/commands/">
+   常用命令
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../computer/editor/">
+   编辑器
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  编程基础
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../programming/introduction/">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../programming/languages/">
+   编程语言
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../programming/bash/">
+     Bash 脚本
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../programming/python/">
+     Python 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../programming/c/">
+     C 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../programming/fortran/">
+     Fortran 语言
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../programming/markdown/">
+     Markdown
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../programming/compile/">
+   编译与链接
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../programming/version-control/">
+   版本控制
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  地震学基础
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismic-source/">
+   震源
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismic-wave/">
+   地震波
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../seismograph/">
+   地震仪
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../">
+   地震图
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     波形数据格式
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../software/">
+   常用软件
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  地震学实践
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../exercises/waveform-fetch/">
+   波形数据下载
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  实践经验
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../best-practices/">
+   前言
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../best-practices/file-organization/">
+   文件管理
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../best-practices/software-installation/">
+   软件安装
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../best-practices/backup/">
+   备份与还原
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../best-practices/zsh/">
+   Zsh 及其配置
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/seismology/seismogram/data-format.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/seismo-learn/seismology101"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/seismo-learn/seismology101/issues/new?title=Issue%20on%20page%20%2Fseismology/seismogram/data-format.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/seismo-learn/seismology101/edit/master/seismology/seismogram/data-format.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sac">
+   SAC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#miniseed">
+   miniSEED
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   格式转换
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   参考文档
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="id1">
+<h1>波形数据格式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">本节贡献者</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、
+<a class="reference external" href="https://github.com/core-man">姚家园</a>（作者）</p>
+</dd>
+<dt class="field-even">最近更新日期</dt>
+<dd class="field-even"><p>2021-01-05</p>
+</dd>
+<dt class="field-odd">预计阅读时间</dt>
+<dd class="field-odd"><p>10 分钟</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>日常科研中，经常会接触不同格式的波形数据，最常见的是 SAC 和 miniSEED 格式。每种数据格式都有各自的优点和缺点。例如，SAC 格式有利于数据处理和分析，但不利于大批量数据的存储和交换。miniSEED 格式有利于波形数据的存档和交换，近几年也常用于数据处理和分析，因此，miniSEED 格式是目前地震学领域<strong>最流行</strong>的波形数据格式。</p>
+<section id="sac">
+<h2>SAC<a class="headerlink" href="#sac" title="永久链接至标题">¶</a></h2>
+<p>SAC 格式由 <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/software/downloads/SAC/">SAC</a>
+（Seismic Analysis Codes）软件定义，但许多其他软件也支持该格式。每个 SAC 文件包含头段区和时间序列数据区，其中头段区定义了与台站、事件、走时以及用户自定义信息等相关的变量。</p>
+<p>SAC 是一款常用的地震学波形处理和分析软件，同时，SAC 格式的数据中可以保存一些元数据和事件信息，使得 SAC 格式是日常科研中的常用数据格式。但若选择该格式来存储数据，则需要很大的硬盘空间。</p>
+</section>
+<section id="miniseed">
+<h2>miniSEED<a class="headerlink" href="#miniseed" title="永久链接至标题">¶</a></h2>
+<p>SEED 全称 Standard for the Exchange of Earthquake Data（地震数据交换标准），主要用于地震学时间序列数据和相关元数据的归档和交换。最新的 SEED 标准是 2012 年发布的
+<a class="reference external" href="http://www.fdsn.org/pdf/SEEDManual_V2.4.pdf">SEED v2.4</a>。虽然该格式包含了完备的地震学观测数据，但一般需要利用
+<a class="reference external" href="https://github.com/iris-edu-legacy/rdseed">rdseed</a> 软件转换成其他格式，再进行数据处理和分析。IRIS 自 2020 年 1 月开始不再提供 SEED 格式的数据下载支持，详情可阅读 <a class="reference external" href="http://www.iris.washington.edu/ds/newsletter/vol21/no1/509/retirement-of-full-seed-data-volumes-from-iris-dmc/">IRIS 数据服务通讯</a>。IRIS 也已<a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/manuals/rdseed/">不再维护 rdseed 软件</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>除了 rdseed 外，ObsPy 也可以将 SEED 格式转换成其他格式。其 <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.core.stream.read.html">read</a> 函数可以读取 SEED 里的时间序列数据，然后利用 <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.write.html">write</a>
+方法转换成其他格式。其 <a class="reference external" href="https://docs.obspy.org/master/packages/obspy.io.xseed.html">xseed</a> 模块的
+<a class="reference external" href="https://docs.obspy.org/master/packages/autogen/obspy.io.xseed.parser.Parser.html">Parser</a> 类可以读取 SEED 里的元数据，并转换成其他格式。</p>
+</div>
+<p>miniSEED 是 SEED 格式的子集，一般用于地震学时间序列数据的归档和交换。其包含的时间序列的元数据非常有限，一般只有时间序列标识和简单的运行状况标识，不包含台站地理坐标、仪器响应以及其他解释数据所需的信息。</p>
+<p>近几年，由于地震学数据处理和分析软件的快速发展（如 <a class="reference external" href="https://github.com/obspy/obspy/wiki">ObsPy</a>），miniseed 格式也常用于数据处理和分析。此时，所需的元数据要从一定格式的元数据文件中提取。例如，目前比较流行的组合方式是 miniSEED 格式的时间序列数据和
+<a class="reference external" href="https://www.fdsn.org/xml/station/">StationXML</a> 格式的元数据。</p>
+</section>
+<section id="id2">
+<h2>格式转换<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>不同波形数据格式经常要互相转换，以实现不同的目的。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/obspy/obspy/wiki">ObsPy</a> 软件提供的<a class="reference external" href="https://docs.obspy.org/master/packages/index.html">波形数据读写模块</a>几乎可以实现目前所有波形数据格式的互相转换。</p></li>
+<li><p><a class="reference external" href="https://github.com/iris-edu/mseed2sac">mseed2sac</a> 软件可以将 miniSEED 格式转成 SAC 格式。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>参考文档<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/formats/">https://ds.iris.edu/ds/nodes/dmc/data/formats/</a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../" title="previous page">地震图</a>
+    <a class='right-next' id="next-link" href="../../software/" title="next page">常用软件</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By seismo-learn<br/>
+        
+            &copy; Copyright 2020–2021, seismo-learn.<br/>
+          Last updated on 2021 年 04 月 03 日.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

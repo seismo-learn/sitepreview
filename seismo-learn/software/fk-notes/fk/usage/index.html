@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>用法 &mdash; 地震“学”软件</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="next" title="gCAP3D" href="../../gcap3d/" />
+    <link rel="prev" title="安装" href="../install/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> 地震“学”软件
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">地震学软件</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cps/">CPS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">fk</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">用法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">基础原理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">参数说明</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">速度模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">震源</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">台站</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">时间序列</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">频率</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k">k 积分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">振幅压制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debug">DEBUG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">格林函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id25">爆炸源</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">单力源</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">双力偶</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#syn">syn 用法说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">输出类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">其他说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">疑问</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gcap3d/">gCAP3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gmt/">GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hinetpy/">HinetPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../obspy/">ObsPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sac/">SAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sod/">SOD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../taup/">TauP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实用工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../template/">教程模板</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../anaconda/">Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/contributing/"><i class="fa fa-edit fa-fw"></i> 贡献指南</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">地震“学”软件</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">fk</a> &raquo;</li>
+        
+      <li>用法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/software/blob/main/source/fk/usage.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>用法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>代码中包含了如下几个重要的命令/脚本：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fk</span></code>：用于计算格林函数的主程序；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">st_fk</span></code>：用于计算静态格林函数的主程序；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trav</span></code>：用于计算 P、S 初至到时的辅助程序；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sachd</span></code>：用于修改 SAC 头段的辅助程序；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fk.pl</span></code>：对 <code class="docutils literal notranslate"><span class="pre">fk</span></code>、<code class="docutils literal notranslate"><span class="pre">st_fk</span></code>、<code class="docutils literal notranslate"><span class="pre">trav</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sachd</span></code>
+的封装，一般情况下直接使用 <code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 脚本即可；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syn</span></code>：用于将格林函数合成为理论地震图三分量的程序；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fk2mt</span></code>：将FK生成的格林函数转换为另一种Moment
+Tensor格式的格林函数，即Moment Tensor的每个分量分别对应3个格林函数；</p></li>
+</ul>
+<p>因而，实际操作的时候，只需要调用 <code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 生成格林函数，再调用 <code class="docutils literal notranslate"><span class="pre">syn</span></code>
+将格林函数合成为三分量地震图即可。</p>
+<div class="section" id="id2">
+<h2>基础原理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>这里不涉及算法的细节，只介绍一些基础的东西。</p>
+<p>根据 Zhu and Rivera (2002)，在定义了柱坐标系之后，位移可以表示为：</p>
+<p>公式中涉及到了一个求和与两个积分：</p>
+<ul class="simple">
+<li><p>对频率的积分，本质上就是一个反傅里叶变换，技术上很成熟了，可以不管</p></li>
+<li><p>对 m
+的求和，其实是对方位角模数的求和，理论上是要从零求和到无穷的。但是由于震源的简单性，只需要对几项做求和即可，具体的求和数目由震源类型决定：</p>
+<ul>
+<li><p>爆炸源：m=0</p></li>
+<li><p>单力源：m=0, 1</p></li>
+<li><p>双力偶：m=0, 1, 2</p></li>
+</ul>
+</li>
+<li><p>对 k 的积分是一个难点，只能进行数值积分，由于积分核
+<span class="math notranslate nohighlight">\(U_z R_m^k + U_r S_m^k + U_{\theta} T_m^k\)</span>
+比较复杂，在做数值积分的时候就需要更多的考虑。</p></li>
+</ul>
+<p>积分核 <span class="math notranslate nohighlight">\(U_z R_m^k + U_r S_m^k + U_{\theta} T_m^k\)</span> 中 R、S、T
+是柱坐标下的基矢量，由一堆 Bessel
+函数组成，已知。该算法中的一大堆数学推导以及细节都是为了求出 Uz、Ur 和
+Ut。具体 Uz、Ur 和 Ut 怎么求，不是本文的重点，需要了解的只能自己推公式。</p>
+</div>
+<div class="section" id="id3">
+<h2>参数说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>先把用法贴在这里作为参考:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fk</span><span class="o">.</span><span class="n">pl</span> <span class="o">-</span><span class="n">Mmodel</span><span class="o">/</span><span class="n">depth</span><span class="p">[</span><span class="o">/</span><span class="n">f_or_k</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">D</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">Hf1</span><span class="o">/</span><span class="n">f2</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">Nnt</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">smth</span><span class="o">/</span><span class="n">dk</span><span class="o">/</span><span class="n">taper</span><span class="p">]</span>
+    <span class="p">[</span><span class="o">-</span><span class="n">Ppmin</span><span class="o">/</span><span class="n">pmax</span><span class="p">[</span><span class="o">/</span><span class="n">kmax</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">Rrdep</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">SsrcType</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">Uupdn</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">Xcmd</span><span class="p">]</span> <span class="n">distances</span>
+</pre></div>
+</div>
+<div class="section" id="id4">
+<h3>速度模型<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">-Mmodel/depth/k_or_f</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">model</span></code> 为模型文件名， <code class="docutils literal notranslate"><span class="pre">k</span></code> 和 <code class="docutils literal notranslate"><span class="pre">f</span></code>
+的作用在下面会解释。</p>
+<div class="section" id="id5">
+<h4>格式<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<p>fk 的输入速度模型是一维水平分层速度模型，其格式为:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">thickness</span> <span class="n">vs</span> <span class="n">vp</span><span class="o">/</span><span class="n">vs</span> <span class="p">[</span><span class="n">rho</span> <span class="n">Qs</span> <span class="n">Qp</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>或:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">thickness</span> <span class="n">vs</span> <span class="n">vp</span> <span class="p">[</span><span class="n">rho</span> <span class="n">Qs</span> <span class="n">Qp</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>其中</p>
+<ul class="simple">
+<li><p>列 1：该层的厚度（km） <strong>注意是厚度不是深度</strong></p></li>
+<li><p>列 2：S 波速度（km/s）</p></li>
+<li><p>列 3：波速比或 P 波速度</p></li>
+<li><p>列 4：密度（ <span class="math notranslate nohighlight">\(g/cm^3\)</span> ）</p></li>
+<li><p>列 5：S 波的 Q 值</p></li>
+<li><p>列 6：P 波的 Q 值</p></li>
+</ul>
+<p>其中前三列是必须的，若未指定密度，则使用经验公式
+<code class="docutils literal notranslate"><span class="pre">rho=0.77+0.32*vp</span></code>；若未指定 Qs，则取 Qs=500；若未指定 Qp，则取
+Qp=2*Qs。</p>
+</div>
+<div class="section" id="k-f">
+<h4>关于 k 和 f<a class="headerlink" href="#k-f" title="永久链接至标题">¶</a></h4>
+<ul class="simple">
+<li><p>若命令行中使用 <code class="docutils literal notranslate"><span class="pre">-Mmodel/depth</span></code> ，则表示输入模型为第二种格式；</p></li>
+<li><p>若命令行中使用
+<code class="docutils literal notranslate"><span class="pre">-Mmodel/depth/k</span></code>，则表示输入模型使用第一种格式，即第三列是波速比；</p></li>
+<li><p>若命令行中使用
+<code class="docutils literal notranslate"><span class="pre">-Mmodel/depth/f</span></code>，则表示需要对速度模型做展平变换，当震中距较大时需要这样做；</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h4>备注<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 的输入模型是先 Vs 再 Vp，而 <code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 在调用 <code class="docutils literal notranslate"><span class="pre">fk</span></code>
+时使用的模型是先 Vp 后 Vs，注意不要搞混；</p></li>
+<li><p>若第一层的厚度为零，则该行指定了上半空间的参数；</p></li>
+<li><p>若第一层的厚度不为零，则上半空间为真空，该层给出了地表下方第一层的参数；</p></li>
+<li><p>最后一层会被自动当做下半无限半空间，并修改其厚度为 0；</p></li>
+<li><p>对于液态层（如海水和外核）：</p>
+<ul>
+<li><p>S 波速度可以用零表示，程序中用自动用 0.0001 替换零值；</p></li>
+<li><p>Qs 值不可以取为零，应取某小值；</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>震源<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id8">
+<h4>震源深度<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+<p>震源深度由 <code class="docutils literal notranslate"><span class="pre">-Mmodel/depth/[f_or_k]</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">depth</span></code> 指定，单位为 km。</p>
+<p>需要注意，震源深度不能位于速度模型的分界面上，即震源的深度必须位于模型某层的内部。fk
+在做展平变换时，震源和速度模型的分界面的深度所用的转换公式不同，所以，当使用了展平变换，即便震源深度和界面深度相同，程序也不会报错。这一点实际使用时要注意（尽管没有报错，也不能让震源在界面上）。</p>
+<p>大多数计算理论地震图的方法都会有这样的限制，因为在计算过程中会用到震源所在层的速度或密度，若震源位于速度模型的分界面上，则会出现参数的间断。</p>
+</div>
+<div class="section" id="id9">
+<h4>震源类型<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<p>fk 中用 <code class="docutils literal notranslate"><span class="pre">-SsrcType</span></code> 指定震源类型，其中 <code class="docutils literal notranslate"><span class="pre">srcType</span></code> 可以取如下三个值：</p>
+<ul class="simple">
+<li><p>0：爆炸源；</p></li>
+<li><p>1：单力源；</p></li>
+<li><p>2：双力偶源；</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>台站<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id11">
+<h4>台站深度<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">-Rrdep</span></code> 中 <code class="docutils literal notranslate"><span class="pre">rdep</span></code> 用于设置 receiver 的深度（单位为
+km），默认值为零，即台站位于地表。</p>
+<p>需要注意，fk
+中要求震源和台站不能位于同一深度。代码中，会计算震源和台站之间的深度差
+<code class="docutils literal notranslate"><span class="pre">hs</span></code>，并将其作为分母。但这一限制的本质原因尚不清楚。</p>
+</div>
+<div class="section" id="id12">
+<h4>台站震中距<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 命令行中可以指定多个震中距，震中距的默认单位为 km。</p>
+<p>当震中距较大时，以 km 做单位很不方便，此时可以使用 <code class="docutils literal notranslate"><span class="pre">-D</span></code>
+选项，表明震中距的单位为度。同时，由于震中距比较大，此时可能还需要对速度模型做展平变换。震中距可以是 0。</p>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>时间序列<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>说说 <code class="docutils literal notranslate"><span class="pre">-Nnt/dt/smth/dk/taper</span></code> 中的 nt、dt 和 smth。</p>
+<div class="section" id="id14">
+<h4>采样间隔<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">dt</span></code> 即生成的格林函数的采样间隔。与此同时，<code class="docutils literal notranslate"><span class="pre">dt</span></code> 决定了 fk
+要计算的最高频率，其公式为</p>
+<div class="math notranslate nohighlight">
+\[f_{max} = \frac{1}{2 dt}\]</div>
+<p>即 fk 生成的格林函数的最高频率是由 <code class="docutils literal notranslate"><span class="pre">dt</span></code> 决定的 Nyquist 采样率。</p>
+<p>因而，一般来说，要首先根据自己的实际需求，确定所需要的最高频率，进而决定
+<code class="docutils literal notranslate"><span class="pre">dt</span></code> 。</p>
+</div>
+<div class="section" id="id15">
+<h4>数据点数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h4>
+<p>nt 即数据点数，nt 的选择有一些需要注意的地方：</p>
+<ul class="simple">
+<li><p>nt 必须为 2 的 n 次方，即可以取 1、2、256、512、1024 等。程序中限制了
+<code class="docutils literal notranslate"><span class="pre">nt*smth</span></code> 不得超过 8192。若想要突破数据点数的限制，可以增大源码
+<code class="docutils literal notranslate"><span class="pre">model.h</span></code> 中 <code class="docutils literal notranslate"><span class="pre">nt=8192</span></code> 的值。</p>
+<ul>
+<li><p>nt=1，则调用 <code class="docutils literal notranslate"><span class="pre">st_fk</span></code> 直接计算静态位移解；</p></li>
+<li><p>nt=2，则调用 <code class="docutils literal notranslate"><span class="pre">fk</span></code> 计算零频位移，等效于静态位移解；</p></li>
+<li><p>nt 必须为 2 的 n 次方是因为在 FFT 时数据点为 2 的 n
+次方时有快速算法；</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(T=nt*dt\)</span> 确定了最终数据的总长度</p></li>
+</ul>
+</div>
+<div class="section" id="smooth">
+<h4>smooth 因子<a class="headerlink" href="#smooth" title="永久链接至标题">¶</a></h4>
+<p>由于 dt 决定了 fk 计算的最高频率，所以 dt
+是不能随便取的。比如需要最高频率为 2.5Hz，则 dt 应取
+0.2s，但是若希望最终生成的数据的采样间隔为 0.05s，则需要 <code class="docutils literal notranslate"><span class="pre">smth</span></code>
+这个参数。</p>
+<p>在程序中，smth 做了两件事情：</p>
+<ol class="arabic simple">
+<li><p>将 dt 除以 smth；</p></li>
+<li><p>将总数据点数乘以 smth；</p></li>
+</ol>
+<p>总的效果应该相当于对计算结果做了一个插值，这也可以通过 SAC
+的插值命令来完成。在程序实现时，实际上就是在反傅里叶变换之前，给数据的高频部分补上更多的零值。</p>
+<p>同样由于快速傅里叶算法的限制， <code class="docutils literal notranslate"><span class="pre">smth</span></code> 也必须取 2 的 n 次方。</p>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>频率<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id17">
+<h4>最高频率<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h4>
+<p>前面已经说到，fk 所计算的最高频率由 <code class="docutils literal notranslate"><span class="pre">dt</span></code> 决定：</p>
+<div class="math notranslate nohighlight">
+\[f_{max} = \frac{1}{2 dt}\]</div>
+</div>
+<div class="section" id="id18">
+<h4>频率间隔<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h4>
+<p>频率域的采样间隔（分辨率）为 <span class="math notranslate nohighlight">\(df=\frac{1}{T}=\frac{1}{nt*dt}\)</span></p>
+</div>
+<div class="section" id="id19">
+<h4>高通滤波<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h4>
+<p>fk 会从零频开始，以 <code class="docutils literal notranslate"><span class="pre">df</span></code> 为频率间隔，一直到最高频率
+<code class="docutils literal notranslate"><span class="pre">fmax</span></code>，计算每个离散频率处的值。</p>
+<p>比如，给定参数 dt=0.1，npts=1024，则 fk 计算的最高频率为 5 Hz，频率间隔
+df 约等于 0.01Hz。因而 fk 会计算 0 Hz、0.01 Hz、0.02 Hz 一直到 5 Hz
+的值，共计循环 512 次。</p>
+<p>有些情况下，比较低频的信息是没有用的，所以可以不必计算，这样循环可以进一步减小，以加速计算。</p>
+<p><code class="docutils literal notranslate"><span class="pre">-Hf1/f2</span></code> 中， <code class="docutils literal notranslate"><span class="pre">f1</span></code> 限定了循环过程中频率的下限，即对频率的循环会从
+<code class="docutils literal notranslate"><span class="pre">f1</span></code> 开始计算到 <code class="docutils literal notranslate"><span class="pre">fmax</span></code> 而不是从零开始，这本质上是一个高通滤波器。</p>
+<p>这样一来，fk 会计算频率在 f1 和 fmax 之间的值，对于小于 f1 以及大于 fmax
+的频率段，其值直接设为零。这实际上是在频率域直接截断，似乎会出现一些问题，所以一般都会对频率的两端做尖灭处理，即
+f2 和 taper。程序会在 f1 和 f2 之间以及 (1-taper)*fmax 和 fmax
+之间分别加上余弦窗。</p>
+<p>taper 的默认值为 0.3，所以当 dt=0.1s 时，fmax=5Hz，则在 3.5Hz 到 5Hz
+之间会加上余弦窗，此时数据的频段上限是 5Hz 还是 3.5Hz 呢？这是个疑问。</p>
+</div>
+</div>
+<div class="section" id="k">
+<h3>k 积分<a class="headerlink" href="#k" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id20">
+<h4>k 是什么<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h4>
+<p>这里的 k 不是波数，而是水平波数：</p>
+<div class="math notranslate nohighlight">
+\[k = k_x = \vec{k}\cdot \vec{x} = \frac{\omega}{v} \sin \theta = \omega p\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\theta\)</span> 是射线与垂直方向的夹角，
+<span class="math notranslate nohighlight">\(p=\frac{\sin \theta}{v}\)</span> 是水平慢度，也就是射线参数。</p>
+</div>
+<div class="section" id="id21">
+<h4>下限和上限<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">-Ppmin/pmax[/kmax]</span></code> 可以限定 k 积分的上下限。其中 <code class="docutils literal notranslate"><span class="pre">pmin</span></code> 确定了 k
+积分的下限：</p>
+<div class="math notranslate nohighlight">
+\[k_{min} = \omega pmin\]</div>
+<p><code class="docutils literal notranslate"><span class="pre">pmax</span></code> 和 <code class="docutils literal notranslate"><span class="pre">kmax</span></code> 决定了 k 积分的上限：</p>
+<div class="math notranslate nohighlight">
+\[k_{max} = \sqrt{kmax^2+\omega pmax}\]</div>
+<p>说明：</p>
+<ol class="arabic simple">
+<li><p>pmin 和 pmax 的取值范围是 0 到 1，代码中会将 pmin 和 pmax
+都除以震源处的 S 波速度。</p></li>
+<li><p>程序中 <code class="docutils literal notranslate"><span class="pre">kmax=kmax/hs</span></code>，其中 hs
+是震源与台站的深度差；由于积分核在零频处以 exp(-k*hs) 的速度随着 k
+衰减，因而要求 kmax&gt;10，以保证求和足够多。</p></li>
+<li><p>指定了 pmin 和
+pmax，就相当于指定了射线参数的范围，或射线出射角度的范围，似乎可以用于筛选中特定射线参数范围的射线；</p></li>
+<li><p>为什么 pmin 和 pmax 在程序中都要除以 S 波速度呢？这样当给定
+<span class="math notranslate nohighlight">\(pmin=\sin 30=0.5\)</span> 时，以 30 度角出射的 S 波会被计算，而以 30
+度角出射的 P 波则不会被计算？这样对吗？</p></li>
+<li><p>pmin 和 pmax 的取值为 0 到 1，为什么不是 - 1 到 1？也许正负号是由
+<code class="docutils literal notranslate"><span class="pre">updn</span></code> 决定的。</p></li>
+</ol>
+</div>
+<div class="section" id="id22">
+<h4>上行和下行<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">-Uupdn</span></code> 选项可以指定是计算全波场还是只计算上行波或下行波。<code class="docutils literal notranslate"><span class="pre">updn</span></code>
+可以取值如下：</p>
+<ul class="simple">
+<li><p>0：计算全波场；也是默认值；</p></li>
+<li><p>1：仅计算下传波场；</p></li>
+<li><p>-1：仅计算上传波场；</p></li>
+</ul>
+<p>该参数取不同的值，会影响到程序内部的一些公式。具体的原理可能需要推公式才能理解。</p>
+</div>
+<div class="section" id="dk">
+<h4>dk<a class="headerlink" href="#dk" title="永久链接至标题">¶</a></h4>
+<p>dk 用于控制 k 积分的积分间隔。程序中 <span class="math notranslate nohighlight">\(dk=dk*PI/max(x,hs)\)</span>，其中
+hs 为震源与台站的深度差， x 为震中距，因而 k
+积分间隔实际上是与要计算的最大震中距有关的。</p>
+<p>由于积分核中 J(kx) 在大震中距时按 2pi/x 的周期震荡，因而要求 dk 小于
+0.5，以保证每个周期内至少有四个采样点。官方建议取值为 0.1 到 0.4。dk
+理论上越小越好，当然 dk 越小计算就会越慢。</p>
+</div>
+</div>
+<div class="section" id="id23">
+<h3>振幅压制<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p>这个参数在 <code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 脚本内部可以修改，但是在命令行里没法修改。</p>
+<p>对于实序列 <span class="math notranslate nohighlight">\(f(t)\)</span> ，其傅里叶变换为:</p>
+<div class="math notranslate nohighlight">
+\[F(\omega) = \int f(t) e^{-i\omega t} dt\]</div>
+<p>若将该实序列 f(t) 乘以 <span class="math notranslate nohighlight">\(e^{-\sigma t/T}\)</span>，即
+<span class="math notranslate nohighlight">\(g(t)=f(t)e^{-\sigma t/T}\)</span> 的傅里叶变换为：</p>
+<div class="math notranslate nohighlight">
+\[G(\omega) = \int g(t) e^{-i\omega t} dt = \int f(t) e^{-\sigma t/T} e^{-i\omega t} dt
+          = \int f(t) e^{-i(\omega-i\sigma/T)} dt
+          = F(\omega-i\sigma/T)\]</div>
+<p>因而，在频率域将 <span class="math notranslate nohighlight">\(\omega\)</span> 减去 <span class="math notranslate nohighlight">\(i\sigma/T\)</span>
+，相当于对实序列乘以 <span class="math notranslate nohighlight">\(e^{-\sigma t/T}\)</span> 。</p>
+<p>其中 T 为实序列的总时间长度，sigma
+称为压制因子，用于降低数据尾部的振幅值，而最终反傅里叶变换得到的实序列，会再次乘以
+<span class="math notranslate nohighlight">\(e^{+\sigma t/T}\)</span>，以消除压制因子对振幅的影响。所以，理论上看，sigma
+没什么实际用途，这样处理的具体目的还不清楚，似乎是出于频率域的稳定性考虑的。</p>
+</div>
+<div class="section" id="debug">
+<h3>DEBUG<a class="headerlink" href="#debug" title="永久链接至标题">¶</a></h3>
+<p>fk 提供了 <code class="docutils literal notranslate"><span class="pre">-X</span></code> 选项用于 debug，最常见的用法是 <code class="docutils literal notranslate"><span class="pre">-Xcat</span></code>，此时 fk.pl
+中 <code class="docutils literal notranslate"><span class="pre">cmd</span></code> 被替换成 <code class="docutils literal notranslate"><span class="pre">cat</span></code> 命令，即将所有的输入都传递给 <code class="docutils literal notranslate"><span class="pre">cat</span></code>
+命令，这样可以很清楚地知道要传递的数据是否正确，方便 debug。</p>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>格林函数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
+<p>fk 将生成的格林函数以 SAC 格式写到磁盘中。</p>
+<div class="section" id="id25">
+<h3>爆炸源<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>生成三个分量，命名为 <code class="docutils literal notranslate"><span class="pre">xxxx.grn.[a-c]</span></code> ，分别是 Z、R、T
+向的格林函数。其单位为 <code class="docutils literal notranslate"><span class="pre">10^-20</span> <span class="pre">cm/(dyne</span> <span class="pre">cm)</span></code> 。</p>
+</div>
+<div class="section" id="id26">
+<h3>单力源<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<p>生成六个分量，其中：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">xxxx.grn.[0-2]</span></code>：m=0 对应的 ZRT 格林函数，等效于 <strong>垂直向上</strong>
+的单位单力产生的位移三分量；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xxxx.grn.[3-6]</span></code>：m=1 对应的 ZRT
+格林函数，等效于水平单力产生的位移三分量；</p></li>
+</ul>
+<p>格林函数的单位为 <code class="docutils literal notranslate"><span class="pre">10^-15</span> <span class="pre">cm/dyne</span></code> 。</p>
+</div>
+<div class="section" id="id27">
+<h3>双力偶<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p>生成九个分量，其中</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">xxx.grn.[0-2]</span></code>：m=0 阶源生成的 ZRT 格林函数，相当于
+45-down-dip(DD) 双力偶源在 45 度方位角处产生的位移，并乘以（-2,-2,0）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xxx.grn.[3-5]</span></code>：m=1 阶源生成的 ZRT 格林函数，相当于 vertical
+dip-slip(DS) 双力偶源在 45 度方位角处产生的位移，并乘以
+<span class="math notranslate nohighlight">\(-\sqrt 2\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xxx.grn.[6-8]</span></code>：m=2 阶源生成的 ZRT 格林函数，相当于 vertical
+strike-slip(SS) 双力偶源在 22.5 度方位角处产生的位移，并乘以
+<span class="math notranslate nohighlight">\(-\sqrt 2\)</span></p></li>
+</ul>
+<p>格林函数的单位为 <code class="docutils literal notranslate"><span class="pre">10^-20</span> <span class="pre">cm/(dyne</span> <span class="pre">cm)</span></code> 。</p>
+</div>
+<div class="section" id="id28">
+<h3>说明<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<p>在大多数教程以及文献中，任意一个双力偶源可以表示为三个基本断层的线性迭加。这三个基本断层分别为
+DD、DS 和
+SS。有些计算格林函数的代码会计算出三种基本断层的位移解，然后根据文献中给出的辐射花样系数进行合成。而
+fk 计算出的是 m=0、1、2 时的位移解，虽然这三者分别与 DD、DS、SS
+在某个特定方位角的位移解有关系。因而在对 fk
+生成的格林函数进行合成时，有专门的辐射花样系数，参见 Zhu and
+Rivera(2002) 的附录 B10-B12。</p>
+</div>
+</div>
+<div class="section" id="syn">
+<h2>syn 用法说明<a class="headerlink" href="#syn" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fk.pl</span></code> 只是算出了格林函数， <code class="docutils literal notranslate"><span class="pre">syn</span></code>
+的作用在于将格林函数组合起来得到RTZ三个方向的理论地震图。</p>
+<p><code class="docutils literal notranslate"><span class="pre">syn</span></code> 的用法相对比较简单，此处作简单介绍：</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">-M</span></code> 选项指定震源机制信息，有四种用法：</p>
+<ul class="simple">
+<li><p>对于爆炸源：<code class="docutils literal notranslate"><span class="pre">-Mmag</span></code> 其中 mag 的单位是 dyne-cm</p></li>
+<li><p>对于单力源：<code class="docutils literal notranslate"><span class="pre">-Mmag/strike/dip</span></code> 其中 mag 的单位是 dyne，dip为力的方向相对于水平方向的夹角</p>
+<ul>
+<li><p>dip=0: 水平单力</p></li>
+<li><p>dip=90: 垂直向下单力</p></li>
+<li><p>dip=-90: 垂直向上单力</p></li>
+</ul>
+</li>
+<li><p>对于双力偶源： <code class="docutils literal notranslate"><span class="pre">-Mmag/strike/dip/rake</span></code> 其中 mag
+是矩震级Mw，strike/dip/rake 的定义参照 Aki&amp;Richards(1980)</p></li>
+<li><p>对于地震矩源： <code class="docutils literal notranslate"><span class="pre">-Mmag/Mxx/Mxy/Mxz/Myy/Myz/Mzz</span></code> 其中 mag 的单位是
+dyne-cm。此处有大坑，见后面的详细说明。</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-Aazimuth</span></code> 选项指定台站方位角，定义为相对于北方向顺时针旋转的角度</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-Ddura/rise</span></code> 指定一个梯形作为震源时间函数。其中 dura
+是梯形震源时间函数的总持续时间，rise
+代表了梯形中上升段所占据的时间比例，取值范围为0到0.5，若取值为0.5，则梯形退化为三角形</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-SsrcFunctionName</span></code> 除了使用 -D
+选项之外，也可以使用将一个SAC文件作为震源时间函数。<code class="docutils literal notranslate"><span class="pre">-S</span></code>
+选项后直接跟SAC文件名。</p>
+<p>用SAC文件作为震源时间函数时需要注意两点：</p>
+<ol class="arabic simple">
+<li><p>SAC文件的采样间隔要与格林函数的采样间隔相等。如果不等也没关系，但要注意
+syn
+是直接把数据点卷积格林函数的，并没有考虑采样间隔的问题，因而若采样间隔不等可能会一些易忽略的错误；</p></li>
+<li><p>严格的震源时间函数应该满足积分之后最大值等于1，只有这种情况下，震级或震源强度的定义才是准确的。当然，若无需考虑绝对振幅是否正确的问题，震源时间函数可以不满足这一要求。</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-Ff1/f2/n</span></code> 对理论地震图进行滤波</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-GFirstCompOfGreen</span></code> 指定第一个FK格林函数的文件名</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-TFirstCompOfGreen</span></code>
+指定第一个MT格林函数的文件名。MT格林函数是指矩张量的每个分量所对应的格林函数，共计6*3=18个。程序
+<code class="docutils literal notranslate"><span class="pre">fk2mt</span></code> 可以将FK生成的FK格林函数转换为这里所需的MT格林函数</p></li>
+<li><p>其他选项都很简单，就不介绍了</p></li>
+</ul>
+<p>关于地震矩源 <code class="docutils literal notranslate"><span class="pre">-Mmag/Mxx/Mxy/Mxz/Myy/Myz/Mzz</span></code>，需要注意：</p>
+<ol class="arabic simple">
+<li><p>此处x=North、y=East、z=Down，即地震矩张量使用的是NED坐标系</p></li>
+<li><p>GCMT网站上给出的地震矩张量是RTP坐标系，二者之间的转换公式见
+Aki&amp;Richards(1980)P117 Box4.4</p></li>
+<li><p>GCMT网站中地震矩张量的6个分量的顺序是 Mrr Mtt Mpp Mrt Mrp
+Mtp，而本程序中的顺序是 Mxx Mxy Mxz Myy Myz
+Mzz，因而若使用GCMT的震源机制解，则需要对6个分量进行坐标转换并修改其先后顺序</p></li>
+</ol>
+</div>
+<div class="section" id="id29">
+<h2>输出类型<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fk</span></code> 计算得到的格林函数究竟是什么物理量呢？是位移还是速度？</p>
+<p>在 Zhu and Rivera(2002)
+的文章中、代码中的注释以及说明文档等多个地方都提到 fk
+计算出的是位移量，而实际上利用 <code class="docutils literal notranslate"><span class="pre">fk</span></code> 和 <code class="docutils literal notranslate"><span class="pre">syn</span></code>
+计算出来的合成地震图是速度场。</p>
+<p>Zhu and Rivera(2002) 的附录 B 中给出了不同震源类型以及不同 m 值所对应的
+source term，这里的 source term 代表了震源引起的位移-应力不连续。source
+term 是一个与频率无关的常数，所以 fk 中所使用的 source term
+在时间域上的脉冲源。（时间域上的脉冲函数，在频率域是一个常数，所以 fk
+中在频率域加了一个常数的 source
+term，实际上相当于在时间域上加上脉冲源。）</p>
+<p>因而，fk
+实际上计算的是脉冲源对应的位移场，其等效于阶跃函数所产生的速度场。（阶跃函数的偏导即脉冲函数。）</p>
+<p>对于一个真实的小震级的简单地震而言，其震源时间函数可以认为是一个阶跃函数，震源时间函数的偏导就是脉冲函数。因而
+fk 计算出的格林函数实际上是速度场，在使用 <code class="docutils literal notranslate"><span class="pre">syn</span></code>
+合成真实数据时，如果使用 <code class="docutils literal notranslate"><span class="pre">-D</span></code>
+选项指定了一个三角震源函数（近似的脉冲函数），得到的合成数据都是速度场。</p>
+</div>
+<div class="section" id="id30">
+<h2>其他说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>对于 PREM 模型，震源深度取 15km，震中距为 5
+度，做不做展平变换，震相的走时差大概在 0.8s 左右</p></li>
+<li><p>将 PREM 模型离散成每层 20km 或 50km，计算出的结果差异不大</p></li>
+<li><p>若台站深度大于震源深度，则会对模型做翻转，程序中的部分参数乘以 - 1；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fk.f</span></code> 中输入的 <code class="docutils literal notranslate"><span class="pre">src_layer</span></code> 表示震源位于第 <code class="docutils literal notranslate"><span class="pre">src_layer</span></code>
+层的顶部， <code class="docutils literal notranslate"><span class="pre">rcv_layer</span></code> 同理；而 <code class="docutils literal notranslate"><span class="pre">trav</span></code> 中 <code class="docutils literal notranslate"><span class="pre">src_layer</span></code>
+表示震源位于第 <code class="docutils literal notranslate"><span class="pre">src_layer</span></code> 的底部；</p></li>
+<li><p>输出的格林函数文件中 <code class="docutils literal notranslate"><span class="pre">xxx.grn.0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">xxx.grn.5</span></code> 会包含 P 波和 S
+波的到时。如果 syn 合成的是 Double Couple，则合成的理论地震图里会包含
+P 波和 S 波的到时。如果 syn 合成的是
+ISO，则合成的理论地震图里没有到时。</p></li>
+</ol>
+</div>
+<div class="section" id="id31">
+<h2>疑问<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>在考虑衰减时，Aki and Richard(1980)的公式 (5.88)
+中给出的公式中虚数前为负号，而 fk 代码中为正号。Why？</p></li>
+<li><p>如何从数学或物理上详细解释 <code class="docutils literal notranslate"><span class="pre">sigma</span></code> 的含义？</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../gcap3d/" class="btn btn-neutral float-right" title="gCAP3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../install/" class="btn btn-neutral float-left" title="安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 03 月 22 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
