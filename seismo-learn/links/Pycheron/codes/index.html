@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://seismo-learn.org/sitepreview/seismo-learn/links/Pycheron/main.css">
+  <title>Seismo Links  | Scientific Research Codes</title>
+</head>
+
+  <body>
+    <main class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+	<a class="navbar-brand" href="https://seismo-learn.org/sitepreview/seismo-learn/links/Pycheron/">
+		<img src="https://seismo-learn.org/sitepreview/seismo-learn/links/Pycheron//logo.png" style="width:30px" />
+		Seismo Links
+	</a>
+
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto">
+			
+			<a class="nav-item nav-link active" href="/sitepreview/seismo-learn/links/Pycheron/">
+				<i class="fas fa-home"></i> Home
+			</a>
+			
+			<a class="nav-item nav-link active" href="https://seismo-learn.org/">
+				<i class="fas fa-link"></i> seismo-learn
+			</a>
+			
+			<a class="nav-item nav-link active" href="https://github.com/seismo-learn/links/blob/main/README.md#contributing">
+				<i class="fas fa-link"></i> Contributing
+			</a>
+			
+			<a class="nav-item nav-link active" href="https://github.com/seismo-learn/links">
+				<i class="fab fa-github"></i> Source Code
+			</a>
+			
+			<a class="nav-item nav-link active"
+				href="https://github.com/seismo-learn/links/edit/main/content/codes.md">
+				<i class="fas fa-edit"></i> Edit this page
+			</a>
+		</ul>
+	</div>
+</nav>
+	  
+
+<aside>
+  <h2>Table of Contents</h2>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-request-tools">Data Request Tools</a></li>
+    <li><a href="#seismic-data-format-conversion">Seismic Data Format Conversion</a></li>
+    <li><a href="#seismic-data-processing">Seismic Data Processing</a></li>
+    <li><a href="#plotting">Plotting</a></li>
+    <li><a href="#traveltime-calculationray-tracing">Traveltime Calculation/Ray Tracing</a></li>
+    <li><a href="#synthetic-seismograms">Synthetic Seismograms</a></li>
+    <li><a href="#earthquake-detection">Earthquake detection</a></li>
+    <li><a href="#earthquake-location">Earthquake location</a></li>
+    <li><a href="#focal-mechanism">Focal Mechanism</a></li>
+    <li><a href="#seismicity">Seismicity</a></li>
+    <li><a href="#stress">Stress</a></li>
+    <li><a href="#body-wave-tomography">Body-wave tomography</a></li>
+    <li><a href="#surface-wave-traveltime-tomography">Surface-wave traveltime tomography</a></li>
+    <li><a href="#noise-hvsr">Noise HVSR</a></li>
+    <li><a href="#ambient-noise-inversion">Ambient Noise Inversion</a></li>
+    <li><a href="#receiver-function">Receiver Function</a></li>
+    <li><a href="#joint-inversion-of-seismological-data">Joint inversion of seismological data</a></li>
+    <li><a href="#multi-observable-modelling-of-geophysical-data">Multi-observable modelling of geophysical data</a></li>
+    <li><a href="#full-waveform-inversion">Full Waveform Inversion</a></li>
+    <li><a href="#shear-wave-splitting">Shear Wave Splitting</a></li>
+    <li><a href="#phase-picking">Phase Picking</a></li>
+    <li><a href="#single-station-signal-analysis">Single station signal analysis</a></li>
+    <li><a href="#array-seismology">Array seismology</a></li>
+    <li><a href="#seismic-data-digitization-and-correction">Seismic data digitization and correction</a></li>
+    <li><a href="#source-spectrum">Source Spectrum</a></li>
+    <li><a href="#earths-interior">Earth&rsquo;s interior</a></li>
+    <li><a href="#tectonics">Tectonics</a></li>
+    <li><a href="#geodesy">Geodesy</a></li>
+    <li><a href="#geodynamics">Geodynamics</a></li>
+    <li><a href="#geophysics">Geophysics</a></li>
+    <li><a href="#signal-analysis">Signal analysis</a></li>
+    <li><a href="#zh-ratio">Z/H Ratio</a></li>
+    <li><a href="#thermodynamic-modeling">Thermodynamic modeling</a></li>
+    <li><a href="#mathmatical-library">Mathmatical library</a></li>
+    <li><a href="#seismic-library">Seismic Library</a></li>
+    <li><a href="#matlab-library">Matlab Library</a></li>
+    <li><a href="#other-library">Other Library</a></li>
+    <li><a href="#software-centers">Software centers</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+      <article>
+        
+<h1>Scientific Research Codes</h1>
+<h2 id="data-request-tools">Data Request Tools</h2>
+<ul>
+<li><a href="http://www.seis.sc.edu/sod">SOD</a>: the best seismic data request tool. |
+<a href="https://blog.seisman.info/sod-notes/">Tutorial (in Chinese)</a> |
+<a href="https://github.com/seisman/SODrecipes">Recipes</a></li>
+<li><a href="https://github.com/obspy/obspy/wiki">ObsPy</a>: Data download, processing and visulization software written in Python</li>
+<li><a href="https://seisman.github.io/HinetPy/">HinetPy</a>: Request and process Hi-net data, written in Python</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/ws-fetch-scripts">Web Service Fetch scripts</a>: Data request scripts written in Perl |
+<a href="https://blog.seisman.info/web-service-fetch-scripts/">Chinese note</a></li>
+<li><a href="http://service.iris.edu/">IRIS DMC Web Services</a>: IRIS Web service for requesting seismic data</li>
+<li><a href="http://ds.iris.edu/ds/nodes/dmc/software/downloads/jweed/">jweed</a>: Data request client written in Java</li>
+<li><a href="http://ds.iris.edu/ds/nodes/dmc/manuals/breq_fast/">BREQ_FAST</a>: Seismic data request by sending email |
+<a href="https://blog.seisman.info/tags/breq_fast/">Chinese note</a></li>
+<li><a href="http://www.iris.edu/wilber3/find_event">IRIS Wilber 3</a>: A web GUI to request waveform data of individual seismic events |
+<a href="https://blog.seisman.info/wilber3/">Chinese note</a></li>
+<li><a href="https://iris-edu.github.io/rover">ROVER</a>: A command line tool to robustly retrieve geophysical timeseries data from data centers</li>
+<li><a href="https://www.usgs.gov/software/strongmotion-fetch">StrongMotion Fetch</a>: Download and/or process strong motion data from various networks</li>
+<li><a href="https://github.com/kasra-hosseini/obspyDMT">obspyDMT</a>: A Python Toolbox for Retrieving, Processing and Management of Seismological Datasets <span class="badge badge-primary">Python</span></li>
+</ul>
+<h2 id="seismic-data-format-conversion">Seismic Data Format Conversion</h2>
+<ul>
+<li><a href="http://ds.iris.edu/ds/nodes/dmc/forms/rdseed/">rdseed</a>: Convert seismic data from SEED format to other common format (SAC et al.) |
+<a href="https://blog.seisman.info/tags/SEED">Chinese notes</a></li>
+<li><a href="https://github.com/iris-edu/sac2mseed">sac2mseed</a>: Convert SAC format to minniSEED format</li>
+<li><a href="https://github.com/iris-edu/mseed2sac">mseed2sac</a>: Convert miniSEED format to SAC format</li>
+<li><a href="http://www.hinet.bosai.go.jp/REGS/manual/dlDialogue.php?r=win32tools">win32tools</a>: Convert WIN32 format used by Hi-net, to SAC format</li>
+<li><a href="https://github.com/iris-edu/dataselect">dataselect</a>: Selection and sorting for data in miniSEED format</li>
+<li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and visulization software written in Python</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/msmod">msmod</a>: A small program to modify miniSEED header values</li>
+</ul>
+<h2 id="seismic-data-processing">Seismic Data Processing</h2>
+<ul>
+<li><a href="http://www.iris.edu/ds/nodes/dmc/forms/sac/">SAC</a>: The most commonly used seismic data processing and plotting software |
+<a href="https://ds.iris.edu/files/sac-manual/">English Manual</a> |
+<a href="https://seisman.github.io/SAC_Docs_zh/">Chinese Manual</a></li>
+<li><a href="https://github.com/obspy/obspy/wiki">ObsPy</a>: Data download, processing and visulization software written in Python</li>
+<li><a href="http://geoscience-community-codes.github.io/GISMO/">GISMO</a>: Data download, processing and visulization software written in Matlab</li>
+<li><a href="https://github.com/jpjones76/SeisIO.jl">SeisIO.jl</a>: Data download, processing and visulization software written in Julia</li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion cureve et al.</li>
+<li><a href="http://www.geopsy.org/download.php">Geopsy</a>: An open source software for geophysical research and application written in C++</li>
+</ul>
+<hr>
+<h2 id="plotting">Plotting</h2>
+<ul>
+<li><a href="https://www.generic-mapping-tools.org/">Generic Mapping Tools (GMT)</a>: the most popular mapping tools in Earth Science</li>
+<li><a href="https://www.pygmt.org">PyGMT</a>: Python interface of GMT (still under development)</li>
+<li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and visulization software written in Python</li>
+<li><a href="http://www.isti2.com/JPlotResp/">JPlotResp</a>: Plot amplitude and phase of instrumental responses in RESP format. | <a href="https://blog.seisman.info/jplotresp">Chinese note</a></li>
+<li><a href="http://www.larskrieger.de/mopad/">MoPad</a>: Analysis and visulization of seismic moment tensor, focal mechanism. | <a href="https://blog.seisman.info/mopad">Chinese note</a></li>
+<li><a href="https://docs.obspy.org/packages/autogen/obspy.imaging.scripts.mopad.html">obspy-mopad</a>: similar to MoPad, provided by ObsPy</li>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">pssac</a>: GMT-style SAC trace plotting for GMT4 | <a href="https://blog.seisman.info/tags/pssac">pssac notes</a></li>
+<li><a href="https://github.com/stephaniedurand/SeisTomoPy">SeisTomoPy</a>: Visulization of 3D tomography models and calculate traveltime in 3D model</li>
+<li><a href="https://www.earth.ox.ac.uk/~smachine/cgi/index.php">SubMachine</a>: Web-Based Tools for Exploring Seismic Tomography and Other Models of Earth’s Deep Interior</li>
+<li><a href="http://www.iearth.org.au/codes/Tomoeye">Tomoeye</a>: a set of programs for tomographic model visualization written in MatLab 6.1 script</li>
+<li><a href="https://www.usgs.gov/software/3d-focal-mechanisms">3D Focal Mechanisms</a>: View earthquake focal mechanism symbols three dimensionally</li>
+<li><a href="https://github.com/iris-edu/EMC-ParaView">EMC-ParaView</a>: A set of Python programmable filters/sources to allow ParaView open-source, multi-platform data analysis and visualization application to display EMC netCDF/GeoCSV models along with other auxiliary Earth data.</li>
+<li><a href="http://ds.iris.edu/dms/products/emc/horizontalSlice.html">EMC visualization tools</a></li>
+</ul>
+<hr>
+<h2 id="traveltime-calculationray-tracing">Traveltime Calculation/Ray Tracing</h2>
+<ul>
+<li><a href="http://www.seis.sc.edu/taup/">TauP</a>: Calculate traveltimes, ray parameters, ray paths, reflection points, piercing points of seismic phases, supporting custom Earth models | <a href="https://blog.seisman.info/tags/TauP">Chinese notes</a></li>
+<li><a href="http://docs.obspy.org/packages/obspy.taup.html">obspy.taup</a>: TauP, rewritten in Python</li>
+<li><a href="https://pyrocko.org">Cake</a>: Traveltime calculation software, written in Python.</li>
+<li><a href="http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/anisotime.html">ANISOtime</a>: Traveltime calculation for transversely isotropic (TI) spherically symmetric models</li>
+<li><a href="http://rses.anu.edu.au/seismology/soft/fmmcode">FM3D</a>: 3D traveltime calculation using Fast Marching Method</li>
+<li><a href="https://github.com/gozwei/pySeismicFMM">pySeismicFMM</a>: 3D traveltime calculation using Fast Marching Method, C codes with a Python interface</li>
+<li><a href="http://www.spice-rtn.org/library/software/traceswani/softwarerelease.2006-11-16.2126060784.html">Surface Wave Ray Tracing with Azimuthal Anisotropy</a>: Surface Wave Ray Tracing with Azimuthal Anisotropy</li>
+<li>iaspei-tau traveltime table package
+<ul>
+<li>Arthur Snoke&rsquo;s version: Traveltime calculator for iasp91 and AK135 models | <a href="http://www.iaspei.org/downloads">IASPEI</a> | <a href="https://seiscode.iris.washington.edu/projects/iaspei-tau">IRIS code</a></li>
+<li><a href="http://rses.anu.edu.au/seismology/soft/ttsoft.html">B.L.N. Kennett and Ray Buland&rsquo;s version</a>: Calculation of travel times and ellipticity corrections for iasp91 and AK135 models | <a href="https://github.com/seisman/TravelTimeEllipcityCorrection">Some revisions to compile the codes</a></li>
+<li><a href="https://members.elsi.jp/~george/sac-bugs.html#ttimes">George Helffrich&rsquo;s version</a>: Traveltime calculator for iasp91, AK135, PREM etc.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="synthetic-seismograms">Synthetic Seismograms</h2>
+<h3 id="ray-theory-for-1d-layered-earth">Ray Theory for 1D layered Earth</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">aser</a>: Calculate synthetic seismograms based on Generalized Ray Theory</li>
+<li><a href="http://www.spice-rtn.org/library/software/Raytheory.html">Ray theory</a>: Ray-theoretical approach to the calculation of synthetic seismograms in global Earth models</li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">Generalized ray in CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al.</li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">Asymptotic ray theory in CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al.</li>
+<li><a href="http://seisan.info">WKBJ method in seisan</a>: <a href="http://seis.geus.net">Seismology at GEUS</a></li>
+</ul>
+<h3 id="reflectivitywavenumber-integration-for-1d-layered-earth">Reflectivity/Wavenumber integration for 1D layered Earth</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">fk</a>: Calculate synthetic seismograms in layered isotropic models, using frequency-wavenumber method | <a href="https://blog.seisman.info/fk-notes">Chinese notes</a></li>
+<li><a href="https://github.com/YunyiQian/grtm">grtm</a>: The generalized reflection and transmission coefficient method with the peak-trough averaging technique for fast and accurate Green&rsquo;s function calculations, especially for surface sources</li>
+<li><a href="https://github.com/Xindingfang/grtm">grtm</a>: Calculate synthetic seismograms in stratified vertically transversely isotropic media using the generalized reflection and transmission coefficient method</li>
+<li><a href="https://www.gfz-potsdam.de/en/section/physics-of-earthquakes-and-volcanoes/data-products-services/downloads-software">QSEIS</a>: Calculating synthetic seismograms based on a layered viscoelastic half-space earth model</li>
+<li><a href="http://www.spice-rtn.org/library/software/ERZSOL3.html">Reflectivity method</a>: Calculating the response of a layered uniform solid layers to excitation by a point moment tensor source using the reflectivity method</li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">Wavenumber integration method in CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al. | <a href="https://blog.seisman.info/cps330-install">Chinese install introduction</a> and <a href="https://blog.seisman.info/cps330">Chinese introdution</a></li>
+<li><a href="http://seisan.info">Discrete wavenumber method in seisan</a>: <a href="http://seis.geus.net">Seismology at GEUS</a></li>
+<li><a href="https://github.com/YunyiQian/multitel3">multitel3</a>: A hybrid method of ray theory and haskell matrix to calculate teleseismic body wave Green&rsquo;s functions in RTZ components</li>
+</ul>
+<h3 id="modal-summation-method-for-1d-layered-earth">Modal Summation method for 1D layered Earth</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">Modal Summation in CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al. | <a href="https://blog.seisman.info/cps330-install">Chinese install introduction</a> and <a href="https://blog.seisman.info/cps330">Chinese introdution</a></li>
+</ul>
+<h3 id="reflectivitywavenumber-integration-for-1d-layered-spherical-earth">Reflectivity/Wavenumber integration for 1D layered spherical Earth</h3>
+<ul>
+<li><a href="https://seiscode.iris.washington.edu/projects/yaseis">yaseis</a>: Calculate synthetic seismograms in spherically layered isotropic models, using frequency-wavenumber method</li>
+</ul>
+<h3 id="normal-modes-summation-for-1d-layered-spherical-earth">Normal modes summation for 1D layered spherical Earth</h3>
+<ul>
+<li><a href="https://github.com/geodynamics/mineos">Mineos</a>: Computes synthetic seismograms in a spherically symmetric non-rotating Earth by summing normal modes</li>
+<li><a href="https://github.com/mdenolle/gesc">Generalized Eigenproblem Spectral Collocation</a></li>
+<li><a href="http://www.spice-rtn.org/library/software/Normal%20Modes.html">Normal modes</a>: Normal-mode based computation of seismograms for spherically symmetric Earth models</li>
+<li><a href="https://www.gfz-potsdam.de/en/section/physics-of-earthquakes-and-volcanoes/infrastructure/tool-development-lab/">QSSP</a>: Calculating complete synthetic seismograms of a spherical earth using the normal mode theory</li>
+<li>DISPER80: Calculation of normal modes, which is a very old fortran code. You have to ask for it from someone who conducts surface-wave studies.</li>
+</ul>
+<h3 id="direct-solution-method">Direct solution method</h3>
+<ul>
+<li><a href="http://www-solid.eps.s.u-tokyo.ac.jp/~dsm/software/software.htm">DSM</a>: Computing synthetic seismograms in spherically symmetric transversely isotropic (TI) media using the Direct Solution Method</li>
+<li><a href="http://www.spice-rtn.org/library/software/GEMINI.html">GEMINI</a>: Calculation of synthetic seismograms for global, spherically symmetric media based in direct evaluation of Green&rsquo;s functions</li>
+<li><a href="https://www.usgs.gov/software/direct-greens-function-synthetic-seismograms">DGRFN</a>: Calculate synthetic seismograms on a radially stratified model</li>
+</ul>
+<h3 id="finite-difference-methods">Finite Difference Methods</h3>
+<ul>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software/SOFI2D">SOFI2D</a>: 2D finite-difference seismic P-SV simulation</li>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software/SOFI2D_sh">SOFI2D_sh</a>: 2D finite-difference seismic SH-wave simulation</li>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software/SOFI3D">SOFI3D</a>: 3D finite-difference seismic wave simulation</li>
+<li><a href="http://www.spice-rtn.org/library/software/Fd2d.html">FD2D</a>: A very simple training code for 2D finite difference</li>
+<li><a href="http://www.spice-rtn.org/library/software/FD3S.html">FD3S</a>: 3D finite-difference seismic wave simulation in a spherical section</li>
+<li><a href="http://www.nuquake.eu/Computer_Codes/1dfd.htm">FD1D</a>
+<ul>
+<li><a href="http://www.spice-rtn.org/library/software/1DFDDS.html">1DFD_DS</a>: 1D finite-difference seismic simulation using the displacement-stress staggered-grid</li>
+<li><a href="http://www.spice-rtn.org/library/software/1DFDDVS.html">1DFD_DVS</a>: 1D finite-difference seismic simulation using the displacement-velocity-stress staggered-grid</li>
+<li><a href="http://www.spice-rtn.org/library/software/1DFDVS.html">1DFD_VS</a>: 1D finite-difference seismic simulation using the velocity-stress staggered-grid</li>
+</ul>
+</li>
+<li><a href="http://www.nuquake.eu/Computer_Codes/2dfd.htm">2DFD_DVS</a>: Computation of seismic wavefields in 2D heterogeneous structures with planar free surface due to linear double-couple source or linear single force or plane-wave incidence</li>
+<li><a href="http://www.nuquake.eu/Computer_Codes/3dfd.htm">FDSim3D</a>: Computation of seismic wavefields in 3D heterogeneous surface geological structures with planar free surface due to surface and near-surface point double couple sources or by a vertically incident plane wave.</li>
+<li><a href="https://github.com/geodynamics/seismic_cpml">SEISMIC_CPML</a>: 2D/3D Finite-Difference Seismic Wave Simulation + CPML</li>
+<li><a href="https://github.com/geodynamics/sw4">SW4</a>: 3D Finite-Difference Seismic Wave Simulation (4th order)</li>
+<li><a href="https://github.com/tktmyd/OpenSWPC">OpenSWPC</a>: 2D/3D Finite-Difference Seismic Wave Simulation</li>
+</ul>
+<h3 id="finite-element-methods">Finite Element Methods</h3>
+<ul>
+<li><a href="http://www.nuquake.eu/Computer_Codes/request.htm">3DFE_GSM</a></li>
+<li><a href="http://www.nuquake.eu/Computer_Codes/request.htm">3DFE_REF</a></li>
+</ul>
+<h3 id="pseudo-spectral-methods">Pseudo-Spectral Methods</h3>
+<ul>
+<li><a href="http://www.spice-rtn.org/library/software/Ps2d.html">Ps2D</a>: A very simple code for elastic wave simulation in 2D using a Pseudo-Spectral Fourier method</li>
+</ul>
+<h3 id="spectral-element-methods">Spectral Element Methods</h3>
+<ul>
+<li><a href="https://github.com/geodynamics/specfem1d">SPECFEM1D</a>: A small code that allows users to learn how a spectral-element program is written</li>
+<li><a href="https://github.com/geodynamics/specfem2d">SPECFEM2D</a>: Simulates seismic wave propagation in a 2D heterogeneous medium, using spectral element method (spherical coordinate system)</li>
+<li><a href="https://github.com/geodynamics/specfem3d">SPECFEM3D</a>: Simulates seismic wave propagation in a 3D heterogeneous medium, using spectral element method (Cartesian coordinate system)
+<ul>
+<li>DSM-SEM &amp; AxiSEM-SEM can be found in <code>EXTERNAL_PACKAGES_coupled_with_SPECFEM3D</code></li>
+<li>FK is not an external code, it is now called internally</li>
+<li>The coulping can be found in <code>specfem3D/couple_with_injection.f90</code></li>
+</ul>
+</li>
+<li><a href="https://github.com/geodynamics/specfem3d_globe">SPECFEM3D_GLOBE</a>: Simulates seismic wave propagation in a 3D heterogeneous medium, using spectral element method (spherical coordinate system)</li>
+<li><a href="https://github.com/wenbowu-geo/SEM_DSM_hybrid">SEM_DSM_hybrid</a>: A hybrid method to efficiently compute teleseismic synthetics with 3D seismic strucure at source side (SEM) and 1D strucure outside the source region (DSM).</li>
+<li><a href="http://www.quest-itn.org/library/software/regsem.html">RegSEM</a>: Simulates seismic wave propagation in a 3D heterogeneous media, using spectral element method at the regional scale. Regional scale means distances ranging from about 1 km (local scale) to 90 degree (continental scale).</li>
+<li><a href="https://github.com/geodynamics/axisem">AxiSEM</a>: A parallel spectral-element method to solve 3D wave propagation in a sphere with axisymmetric or spherically symmetric visco-elastic, acoustic, anisotropic structures.</li>
+<li><a href="http://instaseis.net">Instaseis</a> | <a href="https://blog.seisman.info/iris-syngine">Brief Introduction in Chinese</a>:
+The Python interface of AxiSEM</li>
+<li><a href="https://github.com/kuangdai/AxiSEM3D">AxiSEM3D</a></li>
+<li><a href="http://www.gmg.ruhr-uni-bochum.de/geophysik/seismology/nexd.html">NEXD</a>: Nodal Discontinuous Galerkin Method | <a href="https://github.com/seismology-RUB/NEXD-1D">1D</a> | <a href="https://github.com/seismology-RUB/NEXD-2D">2D</a> | <a href="https://github.com/seismology-RUB/NEXD-3D">3D</a></li>
+<li><a href="http://www.spice-rtn.org/library/software/2DSPEC.html">2DSPEC</a>: A parallel/serial 2d spectral element code for wave propagation and rupture dynamics</li>
+<li><a href="http://www.spice-rtn.org/library/software/sem2dpack.html">sem2dpack</a>: A spectral element package for 2D wave propagation and earthquake rupture dynamics</li>
+</ul>
+<h3 id="discontinuous-galerkin-method">Discontinuous Galerkin Method</h3>
+<ul>
+<li><a href="https://github.com/SeisSol/SeisSol">SeisSol</a>: a scientific software for the numerical simulation of seismic wave phenomena and earthquake dynamics</li>
+</ul>
+<h3 id="surface-waves-in-3d-structures">Surface waves in 3D structures</h3>
+<ul>
+<li><a href="http://www.quest-itn.org/library/software/couplage">Couplage</a>: Modelling of propagation of surface waves in 3D structures by mode coupling method</li>
+</ul>
+<h3 id="hybrid-method">Hybrid method</h3>
+<ul>
+<li><a href="http://geophysics.geo.sunysb.edu/wen/resource/index.html">PSV Hybrid</a>: Calculating synthetic seismograms involving two-dimensional localized hetergeneous structures based on GRT-FD hybrid method</li>
+</ul>
+<hr>
+<h2 id="earthquake-detection">Earthquake detection</h2>
+<ul>
+<li><a href="https://github.com/Dal-mzhang/REAL">REAL</a>: Rapid Earthquake Association and Location</li>
+<li><a href="https://github.com/Dal-mzhang/MatchLocate2">Match&amp;Locate</a>: Template detecting and locating of small earthquakes</li>
+<li><a href="https://github.com/MinLiu19/GPU-MatchLocate1.0">GPU-MatchLocate1.0</a>: A GPU version of Match&amp;Locate</li>
+<li><a href="https://github.com/beridel/fast_matched_filter">FastMatchedFilter</a>: An efficient seismic matched-filter search for both CPU and GPU architectures.</li>
+<li><a href="https://github.com/eqcorrscan/EQcorrscan">EQcorrscan</a>: A python package for the detection and analysis of repeating and near-repeating earthquakes</li>
+<li><a href="https://github.com/eqcorrscan/RT_EQcorrscan">RT-EQcorrscan</a>: Real-time implementation of EQcorrscan&rsquo;s matched-filter earthquake detection</li>
+<li><a href="https://github.com/ahotovec/REDPy">REDPy</a>: Repeating Earthquake Detector, written in Python</li>
+<li><a href="https://github.com/stanford-futuredata/FAST">FAST</a>: End-to-end earthquake detection pipeline via efficient time series similarity search</li>
+<li><a href="https://github.com/yunndlalala/dynamic_earthquake_triggering">dynamic_earthquake_triggering</a>: A package for detecting dynamic earthquake triggering written in Python</li>
+</ul>
+<h2 id="earthquake-location">Earthquake location</h2>
+<ul>
+<li><a href="https://github.com/dttrugman/GrowClust">GrowClust</a>: Relative relocation for earthquake hypocenters</li>
+<li><a href="https://www.ldeo.columbia.edu/~felixw/hypoDD.html">HypoDD</a>: Double-difference earthquake location</li>
+<li><a href="https://github.com/sun1022/hypoRelocate">HypoRelocate</a>: High-resolution earthquake relocation method</li>
+<li><a href="https://www.usgs.gov/software/hypoinverse-earthquake-location">HYPOINVERSE2000</a>: Locate earthquakes and determine magnitudes in a local or regional seismic network</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/nonlinloc">NonLinLoc</a>: Probabilistic, Non-Linear, Global-Search Earthquake Location in 3D Media.</li>
+<li><a href="https://github.com/Dal-mzhang/REAL">REAL</a>: Rapid Earthquake Association and Location</li>
+<li><a href="https://seg.ethz.ch/software/velest.html">Velest</a>: 1-D inversion of velocities and hypocenter locations
+<ul>
+<li>This code is modified to be used in <a href="https://github.com/Dal-mzhang/REAL">REAL</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="focal-mechanism">Focal Mechanism</h2>
+<ul>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">gCAP</a>: Focal mechanism inversion using cut and paste method | <a href="https://blog.seisman.info/gcap-install">Chinese note</a></li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al.</li>
+<li><a href="http://eost.u-strasbg.fr/wphase">W Phase</a>: Moment tensor inversion using W phase</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/focmec">focmec</a>: Package for determining and displaying double-couple earthquake focal mechanisms based on polarities and amplitude ratios</li>
+<li><a href="https://earthquake.usgs.gov/research/software/#HASH">HASH</a>: Determine double-couple earthquake focal mechanisms based on P-wave polarity and S/P amplitude ratios</li>
+<li><a href="https://www.usgs.gov/software/fpfit-fpplot-and-fppage">FPFIT</a>: Calculate and plot fault-plane solutions from first-motion data</li>
+<li><a href="http://www.spice-rtn.org/library/software/ISOLA.html">ISOLA</a>: Retrieve isolated asperities from regional or local waveforms based on multiple-point source representation and iterative deconvolution</li>
+<li><a href="https://github.com/djpugh/MTfit">MTfit</a>: Bayesian Moment Tensor Fitting</li>
+<li><a href="https://github.com/fabriziobernardi/pydmt">pyTDMT</a>: time-domain focal mechanism inversion, written in Python</li>
+<li><a href="https://www.induced.pl/software">hybridMT</a>: MATLAB package for moment tensor inversion and refinement
+<ul>
+<li><a href="https://www.induced.pl/software">fociMT</a>: A stand-alone command line application for seismic moment tensor inversion, which is an integral part of hybridMT package</li>
+</ul>
+</li>
+<li><a href="https://www.induced.pl/software">FOCI</a>: A stand-alone Windows GUI application for performing the seismic moment tensor inversion and source parameters assessment</li>
+<li><a href="https://www.induced.pl/software/radiation-of-psshsv-waves-from-shear-tensile-source-model">RPGEN</a>: Radiation of P/S/SH/SV waves from shear-tensile source model</li>
+<li><a href="https://www.ig.cas.cz/mt-decomposition">MT_DECOMPOSITION</a>: A Matlab software package for the moment tensor decomposition</li>
+<li><a href="https://www.ig.cas.cz/en/pca-decomposition">PCA-DECOMPOSITION</a>: A Matlab software package for the Principal Component Decomposition of seismic traces for extracting the common wavelet</li>
+</ul>
+<h2 id="seismicity">Seismicity</h2>
+<ul>
+<li><a href="https://www.usgs.gov/software/cluster2000">CLUSTER2000</a>: Identify clusters (e.g., aftershocks) in an earthquake catalog</li>
+<li><a href="http://www.seismo.ethz.ch/en/research-and-teaching/products-software/software/ZMAP">ZMAP</a>: A software package to analyze seismicity</li>
+</ul>
+<h2 id="stress">Stress</h2>
+<ul>
+<li><a href="https://www.usgs.gov/software/coulomb-3">Coulomb 3</a>: Investigate Coulomb stress changes on mapped faults and earthquake nodal planes</li>
+<li><a href="https://www.usgs.gov/software/satsi">SATSI</a>: Spatially and/or temporally varying stress field from focal mechanisms</li>
+<li><a href="https://www.induced.pl/software">MSATSI</a>: MATLAB package for stress tensor inversion</li>
+<li><a href="https://www.ig.cas.cz/en/stress-inverse">STRESSINVERSE</a>: A Matlab or Python software package for an iterative joint inversion for stress and fault orientations from focal mechanisms</li>
+</ul>
+<h2 id="body-wave-tomography">Body-wave tomography</h2>
+<ul>
+<li><a href="http://rses.anu.edu.au/~nick">Nick Rawlinson&rsquo;s softwares</a>
+<ul>
+<li><a href="http://rses.anu.edu.au/~nick/fmtomo.html">FMTOMO</a>: 3-D traveltime tomography based on fast marching method | <a href="http://www.iearth.org.au/codes/FMTOMO">FMTOMO at iEarth</a></li>
+<li><a href="http://rses.anu.edu.au/~nick/teletomo.html">FMTT</a>: Teleseismic tomography based on fast marching method | <a href="http://www.iearth.org.au/codes/FMTT">FMTT at iEarth</a></li>
+</ul>
+</li>
+<li><a href="https://www.usgs.gov/software/3d-velocity-modeling">SIMUL2000</a>: Traveltime tomography</li>
+</ul>
+<h2 id="surface-wave-traveltime-tomography">Surface-wave traveltime tomography</h2>
+<h3 id="teleseismic-surface-wave-tomography">Teleseismic surface-wave tomography</h3>
+<ul>
+<li><a href="http://yaolab.ustc.edu.cn/resources.php?i=28">Huajian Yao&rsquo;s Lab</a>: Surface-wave two-station dispersion analysis GUI software in Matlab (What&rsquo;s the tomography method?)</li>
+<li><a href="https://ds.iris.edu/ds/products/aswms">ASWMS</a>: Automated Surface Wave Phase Velocity Measuring System, measuring two-station phase delay and then 2D phase velocity maps at each period using Eikonal and Helmhotza tomography</li>
+<li><a href="https://github.com/chukren/SurfwaveTomoPrograms">Finite frequency Rayleigh wave tomography</a></li>
+</ul>
+<h3 id="ambient-noise-surface-wave-tomography">Ambient noise surface-wave tomography</h3>
+<h4 id="measuring-traveltime-delay">Measuring traveltime delay</h4>
+<ul>
+<li><a href="http://ciei.colorado.edu/Products">Research Products from CU-Boulder</a>
+<ul>
+<li><a href="http://ciei.colorado.edu/Products/ancc-1.0-1.src.tgz">ancc</a>: Ambient noise data processing code and database for processing: available from the CU, in C</li>
+<li><a href="http://ciei.colorado.edu/Products/aftan-1.1.tgz">AFTAN</a>: Automatic frequency-time analysis, in C and Fortran</li>
+</ul>
+</li>
+<li><a href="https://github.com/Hamzeh-Sadeghi/GSpecDisp">GSpecDisp</a>: A Matlab package for phase-velocity dispersion measurement from ambient-noise correlations</li>
+<li><a href="http://yaolab.ustc.edu.cn/resources.php?i=28">Huajian Yao&rsquo;s Lab</a>
+<ul>
+<li>Ambient noise cross-correlation codes for daily long SAC format data in Matlab</li>
+<li>Dispersion Analysis GUI software for ambient noise cross-correlation functions in Matalb</li>
+</ul>
+</li>
+<li><a href="https://github.com/mdenolle/noisepy">NoisePy</a>: Fast and easy computation of ambient noise cross-correlation functions written in Python, with noise monitoring and surface wave dispersion analysis</li>
+<li><a href="https://github.com/tclements/SeisNoise.jl">SeisNoise</a>: Fast and easy ambient noise cross-correlation in Julia, with noise monitoring and surface wave dispersion analysis</li>
+<li><a href="https://github.com/ColinLii/CC-FJpy">CC-FJpy</a>: A Python Package for seismic ambient noise cross-correlation and the frequency-Bessel transform method</li>
+<li><a href="https://gitext.gfz-potsdam.de/chris/xdcpick">XDCpick</a>: A simple tool for efficient picking of group velocity dispersion curves, in C.</li>
+</ul>
+<h4 id="inverting-phasegroup-velocity-maps">Inverting phase/group velocity maps</h4>
+<ul>
+<li><a href="http://ciei.colorado.edu/Products/tomo_sp_cu_s-v1.1.tgz">tomo_sp_cu_s</a>: Surface wave tomography based on ray theory | <a href="http://ciei.colorado.edu/Products">Research Products from CU-Boulder</a></li>
+<li><a href="http://rses.anu.edu.au/~nick/surftomo.html">FMST</a>: traveltime tomography code in 2-D spherical shell coordinates based on fast marching method | <a href="http://www.iearth.org.au/codes/FMST">FMST at iEarth</a></li>
+<li><a href="http://www.iearth.org.au/codes/rj-TOMO">rj-TOMO</a>: 2-D transdimensional travel time tomography based on Reversible jump Markov chain Monte Carlo algorithm</li>
+</ul>
+<h3 id="one-step-surface-wave-traveltime-tomography">One-step surface-wave traveltime tomography</h3>
+<ul>
+<li><a href="https://github.com/HongjianFang/DSurfTomo">DSurfTomo</a>: Direct inversion of 3-D Vs structure from dispersion data based on period-dependent ray tracing in Fortran</li>
+<li><a href="https://www.geos.ed.ac.uk/eip/codes.html">3D Monte Carlo Direct Inversion</a>: 3D Monte Carlo tomography using both body and surface wave data</li>
+</ul>
+<h3 id="surface-wave-dispersion-calculation">Surface-wave dispersion calculation</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al. | <a href="https://blog.seisman.info/cps330-install">Chinese install introduction</a> and <a href="https://blog.seisman.info/cps330">Chinese introdution</a></li>
+<li><a href="http://www.geopsy.org/download.php">Geopsy</a>: An open source software for geophysical research and application written in C++</li>
+<li><a href="http://ciei.colorado.edu/Products/senskernel-1.0.tgz">senskernel</a>: Calculate sensitivity kernal of group velocity and phase velocity</li>
+<li><a href="https://github.com/ColinLii/TheoreticalDispersionSpectrum">TheoreticalDispersionSpectrum</a>: Theoretical Dispersion Spectrum calculation by the Generalized Reflection and Transmission Method</li>
+<li><a href="http://www.spice-rtn.org/library/software/vphase.html">Vphase</a>: A training code to calculation of phase velocity dispersion curves</li>
+</ul>
+<h2 id="noise-hvsr">Noise HVSR</h2>
+<ul>
+<li><a href="http://www.geopsy.org/download.php">Geopsy</a>: An open source software for geophysical research and application written in C++</li>
+<li><a href="https://github.com/iris-edu/HVSR">IRIS HVSR</a>: A set of Python scripts to compute and plot HVSR curves using MUSTANG PDF-PSD web service from IRIS | <a href="https://ds.iris.edu/ds/products/hvsr">IRIS website</a></li>
+<li><a href="https://github.com/krischer/HtoV-Toolbox">H/V Toolbox</a>: A toolbox to calculate surface-wave HVSR</li>
+<li><a href="https://w3.ual.es/GruposInv/hv-inv">HV-Inv</a>: Inversion of HVSR and SW dispersion</li>
+<li><a href="https://www.samuelbignardi.com/en/openhvsr-project">OpenHVSR</a>: Measure and Inversion of HVSR written in Matlab</li>
+<li><a href="https://zenodo.org/record/260131#.XhMFYxczY1J">HV-TEST</a>: A tool for the verification of the reliability and clarity of the H/V peak according to the SESAME criteria</li>
+<li><a href="https://www.researchgate.net/publication/283085984_HVResPy_an_open-source_Python_tool_for_Geopsy_HVSR_post-processing?channel=doi&amp;linkId=5629ff6308ae518e347ef829&amp;showFulltext=true">HVResPy</a>: An open-source Python tool for Geopsy HVSR post-processing</li>
+</ul>
+<h2 id="ambient-noise-inversion">Ambient Noise Inversion</h2>
+<ul>
+<li><a href="http://www.msnoise.org">MSNoise</a>: A Python Package for Monitoring seismic velocity changes using ambient seismic noise</li>
+<li><a href="https://github.com/bgoutorbe/seismic-noise-tomography">seismic-noise-tomography</a>: Python framework for seismic noise tomography</li>
+</ul>
+<h2 id="receiver-function">Receiver Function</h2>
+<h3 id="synthetic-rf">Synthetic RF</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">hk</a>: Receiver function package (synthetic RF, deconvolution, and H-k stacking) | <a href="https://blog.seisman.info/hk-install">Chinese note</a></li>
+<li><a href="https://home.cc.umanitoba.ca/~frederik/Software">RAYSUM</a>: Ray-theoretical modelling of teleseismic waves in dipping, anisotropic structures</li>
+<li><a href="http://www.eas.slu.edu/eqc/eqccps.html">CPS330</a>: Collection of programs for calculating theorectical seismogram, receiver function, surface wave dispersion curve et al. | <a href="https://blog.seisman.info/cps330-install">Chinese install introduction</a> and <a href="https://blog.seisman.info/cps330">Chinese introdution</a></li>
+<li><a href="https://seiscode.iris.washington.edu/projects/rfsyn">RF software</a>: Computes a receiver-function for a stack of anisotropic layers over an isotropic halfspace, via a reflectivity algorithm, assuming a plane wave incident from below | <a href="https://www.ldeo.columbia.edu/~vadim/RF/RF-manual.html">Manual</a> | <a href="http://jparkcodes.blogspot.com">Some updates at JParkCodes</a></li>
+<li><a href="https://members.elsi.jp/~george/rftool.html">RFtool</a>: An interactive, GUI-based tool to simulate P or S receiver functions</li>
+<li><a href="http://geophysics.geo.sunysb.edu/wen/resource/index.html">PSV Hybrid RF</a>: Calculating synthetic RF in two-dimensional localized hetergeneous structures based on PSV Hybrid method (GRT-FD).</li>
+</ul>
+<h3 id="rf-measurements-and-inversion">RF measurements and inversion</h3>
+<ul>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">hk</a>: Receiver function package (deconvolution and H-k stacking) | <a href="https://blog.seisman.info/hk-install">Chinese note</a></li>
+<li><a href="https://seiscode.iris.washington.edu/projects/rfsyn">RF software</a>: Computes a receiver-function for a stack of anisotropic layers over an isotropic halfspace, via a reflectivity algorithm, assuming a plane wave incident from below | <a href="https://www.ldeo.columbia.edu/~vadim/RF/RF-manual.html">Manual</a> | <a href="http://jparkcodes.blogspot.com">Some updates at JParkCodes</a></li>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">CCP</a>: Common-Conversion-Point (CCP) stacking of receiver functions | <a href="https://blog.seisman.info/ccp-install">Chinses note</a></li>
+<li><a href="http://www.iearth.org.au/codes/rj-RF">rj-RF</a>: Inversion of Receiver Functions using Reversible jump Markov chain Monte Carlo algorithm</li>
+<li><a href="http://rses.anu.edu.au/~hrvoje/IRFFMv1.1.html">IRFFM</a>: An interactive Java program for joint interactive forward modelling of teleseismic receiver functions and surface wave dispersion</li>
+<li><a href="http://faculty.sustech.edu.cn/wp-content/uploads/2020/08/2020080323260850.zip">CrazySeismic</a>: A MATLAB GUI-based package to process single channel seismic data (picking, McCC, PCA, Deconvolution)</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/funclab">FuncLab</a>: a Matlab based GUI for handling receiver functions (link does work) | <a href="https://seiscode.iris.washington.edu/projects/funclab-revised">revised FuncLab</a></li>
+<li><a href="https://github.com/iwbailey/processRFmatlab">processRFmatlab</a>: matlab functions and scripts for working with receiver functions</li>
+<li><a href="https://github.com/trichter/rf">rf</a>: Receiver function calculation in seismology, written in Python</li>
+<li><a href="https://github.com/xumi1993/SplitRFLab">SplitRFLab</a>: A Matlab toolbox of processing receiver functions and shear wave spliting modified from <a href="http://splitting.gm.univ-montp2.fr">Splitlab</a> and <a href="https://github.com/iwbailey/processRFmatlab">processRFmatlab</a></li>
+<li><a href="https://github.com/rmartinshort/RecieverFunctions">Some group codes for RF analysis</a>: Ammon&rsquo;s &amp; Cheng&rsquo;s codes</li>
+</ul>
+<h2 id="joint-inversion-of-seismological-data">Joint inversion of seismological data</h2>
+<ul>
+<li><a href="https://www.juanafonso.com/software">LitMod_seis</a>: A joint inversion code for inverting Vs and anisotropy data (Rayleigh and Love phase and/or group velocities, ellipticity (Z/H ratio) and receiver functions) with a Markov Chain Monte Carlo method. (Released soon)</li>
+<li><a href="http://yaolab.ustc.edu.cn/resources.php?i=28">Huajiang Yao&rsquo;s Lab</a>: Inversion of Vs, Vp/Vs, and interface depth using (multimode, Rayleigh and/or Love, phase and/or) dispersion data and Rayleigh wave fundamental mode ZH data (ellipticity) based on the Neighborhood Algorithm in Fortran</li>
+</ul>
+<h2 id="multi-observable-modelling-of-geophysical-data">Multi-observable modelling of geophysical data</h2>
+<ul>
+<li><a href="https://www.juanafonso.com/software">LitMod</a>: Multi-observable modelling of geophysical data
+<ul>
+<li><a href="https://www.juanafonso.com/software">LitMod_2D</a>: An interactive software to perform multi-observable modelling of geophysical data for 2D whole lithospheric structure of the Earth and/or other terrestrial planets</li>
+<li><a href="https://www.juanafonso.com/software">LitMod_T</a>: the &ldquo;transient&rdquo; equivalent of LitMod_2D</li>
+<li><a href="https://www.juanafonso.com/software">LitMod_3D</a>: A 3D version LitMod | <a href="https://github.com/javfurchu/litmod">Github code</a></li>
+<li><a href="https://www.juanafonso.com/software">LitMod_4INV</a>: A fully nonlinear probabilistic inversion code(s) in spherical coordinates for the compositional and thermal structure of the lithosphere and upper mantle, simultaneously inverting gravity gradients, gravity anomalies, geoid height, surface heat flow, magnetotelluric data, receiver functions, surface-wave data, absolute elevation (including both static and dynamic effects) and body-wave data, together with petrological information.</li>
+</ul>
+</li>
+</ul>
+<h2 id="full-waveform-inversion">Full Waveform Inversion</h2>
+<ul>
+<li><a href="https://seiscope2.osug.fr/TOY2DAC,82?lang=fr">TOY2DAC</a>: 2D Acoustic frequency-domain Full Waveform modeling and inversion code</li>
+<li><a href="http://www.gmg.ruhr-uni-bochum.de/geophysik/seismology/aski.html">ASKI</a>: Modularized program suite for sensitivity analysis and iterative full waveform inversion</li>
+<li><a href="https://github.com/JuliaInv/FWI.jl">FWI.jl</a>: 2D/3D acoustic FWI in Julia</li>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software/IFOS2D">IFOS2D</a>: 2D elastic full waveform inversion</li>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software/IFOS3D">IFOS3D</a>: 3D elastic full waveform inversion</li>
+<li><a href="https://github.com/daniel-koehn/DENISE-SH">DENISE-SH</a>: 2D SH-wave full waveform modeling and inversion</li>
+<li><a href="https://github.com/daniel-koehn/DENISE-Black-Edition">DENISE</a>: 2D PSV-wave full waveform modeling and inversion</li>
+<li><a href="https://github.com/daniel-koehn/GERMAINE">GERMAINE</a>: 2D Acoustic frequency-domain Full Waveform modeling and inversion code.</li>
+<li><a href="https://github.com/daniel-koehn/SAVA">SAVA</a>: 3D seismic modelling, FWI and RTM code for wave propagation in isotropic (visco)-acoustic/elastic and anisotropic orthorhombic/triclinic elastic media</li>
+<li><a href="https://cos.ethz.ch/software/production/ses3d.html">SES3D</a>: Simulation of elastic wave propagation and waveform inversion in a spherical section</li>
+<li><a href="http://www.lasif.net">LASIF</a>: Framework for large scale full waveform inversion</li>
+<li><a href="https://github.com/yanhuay/seisDD">seisDD</a>: Double-difference adjoint seismic tomography</li>
+<li><a href="https://salvus.io">Salvus</a>: Full waveform modelling and inversion</li>
+</ul>
+<h2 id="shear-wave-splitting">Shear Wave Splitting</h2>
+<ul>
+<li><a href="http://splitting.gm.univ-montp2.fr">SplitLab</a>: Shear-wave birefringence analysis code, written in Matlab | <a href="https://robporritt.wordpress.com/software">An updated version</a></li>
+<li><a href="http://mfast-package.geo.vuw.ac.nz">MFAST</a>: Multiple Filter Automatic Splitting Technique written in Fortran</li>
+<li><a href="https://github.com/ftilmann/multisplit">multisplit</a>: Shear-wave birefringence analysis code</li>
+<li><a href="https://github.com/jwookey/sheba">SHEBA</a>: Shear-wave birefringence analysis code</li>
+<li><a href="http://www.geophysik.uni-frankfurt.de/64002762/Software">SplitRacer</a>: Shear-wave splitting analysis written in Matlab</li>
+</ul>
+<h2 id="phase-picking">Phase Picking</h2>
+<ul>
+<li><a href="http://rses.anu.edu.au/seismology/soft/astack/index.html">Adaptive Stacking</a>: Adaptive stacking to estimating traveltime residual patterns across a network of seismic stations | <a href="http://www.iearth.edu.au/codes/AdaptiveStacking">Adaptive stacking at iEarth</a></li>
+<li><a href="https://seiscode.iris.washington.edu/projects/pysmo-aimbat">AIMBAT</a>: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times</li>
+<li><a href="http://web.gps.caltech.edu/~yucq/software.html">CrazySeismic</a>: A MATLAB GUI-based package to process single channel seismic data (picking, McCC, PCA, Deconvolution)</li>
+<li><a href="http://web.gps.caltech.edu/~yucq/software.html">CrazyTremor</a>: A MATLAB GUI-based package to display and picking multi-channel seismic data</li>
+<li><a href="https://github.com/xumi1993/mccc">mccc</a>: Determines optimum relative delay times for seismograms by multi-channel cross-correlation</li>
+<li><a href="https://github.com/austinholland/PhasePApy">PhasePApy</a>: Seismic Phase Picker and Associator, written in Python</li>
+<li><a href="https://www.usgs.gov/software/p-phase-picker">P-Phase Picker</a>: Detecting P-phase onset written in Java and Matlab</li>
+</ul>
+<h2 id="single-station-signal-analysis">Single station signal analysis</h2>
+<ul>
+<li><a href="https://robporritt.wordpress.com/software">Station Analysis Tools</a>: A set of c routines for computation of power spectral densities, coherence, probability density functions, and a handful of other tools for monitoring the health of a station | <a href="https://seiscode.iris.washington.edu/projects/station-analysis-tools">iris code site</a></li>
+<li><a href="http://service.iris.edu/mustang">MUSTANG</a>: A quality assurance system at the IRIS DMC that provides metrics pertaining to seismic data quality | <a href="https://ds.iris.edu/ds/nodes/dmc/tutorials/getting-started-with-mustang">Tutorial</a></li>
+<li><a href="https://github.com/sandialabs/pycheron">Pycheron</a>: A Python library for quality control of seismic data based on IRIS MUSTANG</li>
+<li><a href="https://www.usgs.gov/software/pqlx-a-software-tool-evaluate-seismic-station-performance">PQLX</a>: An open-source software system for evaluating seismic station performance and data quality</li>
+<li><a href="http://ds.iris.edu/ds/products/noise-toolkit">IRIS DMC Noise Toolkit Products</a>
+<ul>
+<li><a href="https://seiscode.iris.washington.edu/projects/iris-dmc-noise-toolkit">Noise Toolkit</a>
+<ul>
+<li><a href="https://seiscode.iris.washington.edu/projects/noise-toolkit-pdf-psd-bundle">PDF-PSD</a>: Computing Power Spectral Densities (PSD) of waveform data</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/noise-toolkit-microseism-energy-me-bundle">microseism energy</a>: Performing microseism energy computations from PSDs</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/noise-toolkit-polarization-attributes-bundle">Polarization attributes</a>: Performing frequency dependent polarization analysis of seismograms</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www.usgs.gov/software/estnoise">Est_noise</a>: Analyze time-series data to quantify temporal correlations and simultaneously estimate rates, offsets, and other functional dependencies.</li>
+<li><a href="http://www.nuquake.eu/Computer_Codes/tfsig.htm">TF-SIGNAL</a>: Computation and visualization of time-frequency representations of time signals using one or more of seven alternative methods of time-frequency analysis</li>
+<li><a href="http://www.ceri.memphis.edu/people/clangstn/software.html">BCseis</a>: a MatLab GUI and set of inline functions for performing various non-linear thresholding operations using the Continuous Wavelet Transform</li>
+</ul>
+<h2 id="array-seismology">Array seismology</h2>
+<ul>
+<li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and visulization software written in Python</li>
+<li><a href="http://www.geopsy.org/download.php">Geopsy</a>: An open source software for geophysical research and application written in C++</li>
+</ul>
+<h2 id="seismic-data-digitization-and-correction">Seismic data digitization and correction</h2>
+<ul>
+<li><a href="https://seiscode.iris.washington.edu/projects/cwpar-clipped-waveform-pickup-and-restoration">CWPAR</a>: Clipped Waveform Pickup and Restoration</li>
+<li><a href="http://www.seismology.harvard.edu/research/DigitSeis.html">DigitSeis</a>: A Digitization Software for Analog Seismograms, written in Matlab</li>
+</ul>
+<h2 id="source-spectrum">Source Spectrum</h2>
+<ul>
+<li><a href="https://www.gaprieto.com/software">Multitaper Spectrum Estimation Library</a></li>
+</ul>
+<h2 id="earths-interior">Earth&rsquo;s interior</h2>
+<ul>
+<li><a href="http://geophysics.geo.sunysb.edu/wen/resource/index.html">PKPprecursor</a>: Locating seismic scatterers in the lower mantle, using PKP precursor onsets</li>
+<li><a href="https://github.com/lijiaqi0315/FastTrip">FastTrip</a>: Fast MPI-accelerated Triplication Waveform Inversion Package</li>
+</ul>
+<h2 id="tectonics">Tectonics</h2>
+<ul>
+<li><a href="https://www.earthbyte.org/category/gplates">GPlates</a>: A desktop software for the interactive visualisation of plate-tectonics</li>
+</ul>
+<h2 id="geodesy">Geodesy</h2>
+<ul>
+<li><a href="https://www.juanafonso.com/software">Gravity modelling and inversion in 2D</a>: A very simple matlab code to illustrate the basics of gravity modelling and inversion</li>
+</ul>
+<h2 id="geodynamics">Geodynamics</h2>
+<ul>
+<li><a href="https://github.com/geodynamics/citcoms">CitcomS</a>: solve compressible thermochemical convection problems relevant to Earth&rsquo;s mantle.</li>
+</ul>
+<h2 id="geophysics">Geophysics</h2>
+<ul>
+<li><a href="http://www.seis.sc.edu/software/distaz">distaz</a>: Classic codes to calculate distance, azimuth and back-azimuth of any two points at the Earth&rsquo;s surface | <a href="https://blog.seisman.info/calculate-dist-az-baz">Chinese note</a></li>
+<li><a href="http://cpc.cs.qub.ac.uk/summaries/AFAT_v1_0.html">AFAT</a>: Solving the Christoffel equation: phase and group velocities</li>
+</ul>
+<h2 id="signal-analysis">Signal analysis</h2>
+<ul>
+<li><a href="https://github.com/Naderss/SEC_C">SEC_C</a>: Super-Efficient Cross-Correlation</li>
+</ul>
+<h2 id="zh-ratio">Z/H Ratio</h2>
+<ul>
+<li><a href="https://github.com/krischer/HtoV-Toolbox">HtoV-Toolbox</a>: Calculate H/V ratios</li>
+</ul>
+<hr>
+<h2 id="thermodynamic-modeling">Thermodynamic modeling</h2>
+<ul>
+<li><a href="http://www.perplex.ethz.ch/">Perple_X</a>: calculating and displaying phase diagrams, phase equilibria, and thermodynamic data.
+| <a href="http://www.perplex.ethz.ch/perplex_documentation.html">Documentation</a> | <a href="http://www.perplex.ethz.ch/perplex_thermodynamic_data_file.html">Thermodynamic Data Files</a> | <a href="http://www.perplex.ethz.ch/PerpleX_solution_model_glossary.html">Glossary</a></li>
+<li><a href="https://hpxeosandthermocalc.org/the-thermocalc-software/">THERMOCALC</a></li>
+<li><a href="https://burnman.org/">BurnMan</a>: A thermodynamic and geophysics toolkit for the Earth and planetary sciences</li>
+</ul>
+<hr>
+<h2 id="mathmatical-library">Mathmatical library</h2>
+<ul>
+<li><a href="https://github.com/SHTOOLS/SHTOOLS">SHTOOLS</a>: Spherical Harmonic Tools</li>
+<li><a href="http://www.spice-rtn.org/library/software/shansyn">Shansyn</a>: Spherical Harmonic ANalysis and SYNthesis</li>
+<li><a href="https://seiscope2.osug.fr/SEISCOPE-OPTIMIZATION-TOOLBOX?lang=fr">SEISCOPE TOOLBOX</a>: Seiscope optimization toolbox</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/peipcode">Parameter Estimation and Inverse Problems Example Code and Associated Subroutines</a>: a compilation of inverse and parameter estimation code that accompanies the second edition of the textbook &ldquo;Parameter Estimation and Inverse Problems&rdquo;</li>
+<li><a href="https://www.cgal.org/index.html">The Computational Geometry Algorithms Library</a></li>
+<li><a href="https://www.juanafonso.com/software">Delayed Rejection Adaptive Metropolis (DRAM) in Fortran</a>: A simple teaching code in Fortran of the DRAM method</li>
+<li><a href="http://www.iearth.org.au/codes/rj-MCMC">rj-MCMC</a>: A library providing routines for running Reversible Jump Monte-Carlo Markov chains for 1-D and 2-D spatial regression problems</li>
+<li><a href="http://rses.anu.edu.au/~malcolm/_pages/Research">Malcolm Sambridge&rsquo;s softwares</a>
+<ul>
+<li><a href="http://rses.anu.edu.au/~malcolm/na/na.html">Neighbourhood Algorithm</a> | <a href="http://www.iearth.org.au/codes/NA">Neighbourhood Algorithm at iEarth</a></li>
+<li><a href="http://rses.anu.edu.au/geodynamics/nn/nn.html">Natural Neighbours</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="seismic-library">Seismic Library</h2>
+<ul>
+<li><a href="https://www.ldeo.columbia.edu/users/menke/software.html">William Menke&rsquo;s codes</a></li>
+<li><a href="https://github.com/iris-edu/libmseed">libmseed</a>: A miniSEED library that provides a framework for manipulation of SEED data records</li>
+</ul>
+<h2 id="matlab-library">Matlab Library</h2>
+<ul>
+<li><a href="https://www.crewes.org/ResearchLinks/FreeSoftware">CREWES Matlab Toolbox</a></li>
+</ul>
+<h2 id="other-library">Other Library</h2>
+<ul>
+<li><a href="https://software.intel.com/en-us/qualify-for-free-software">Free Intel® Software Development Tools</a> | <a href="https://blog.seisman.info/intel-non-commercial-software">Chinese introduction</a> and <a href="https://blog.seisman.info/uninstall-intel-parallel-studio-completely">How to uninstall</a>
+<ul>
+<li><a href="https://software.intel.com/en-us/qualify-for-free-software/educator">Educator</a> | <a href="https://software.intel.com/en-us/qualify-for-free-software/opensourcecontributor">Open Source Contributor</a> | <a href="https://software.intel.com/en-us/qualify-for-free-software/student">Student</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="software-centers">Software centers</h2>
+<ul>
+<li><a href="https://geodynamics.org/cig/software">Computational Infrastructure for Geodynamics (CIG): Software</a></li>
+<li><a href="https://www.earthbyte.org/category/resources/software-workflows">EarthByte software</a></li>
+<li><a href="https://seg.ethz.ch/software.html">ETH Seismology and Geodynamics: Software</a></li>
+<li><a href="https://git.scc.kit.edu/GPIAG-Software">Geophysical institut of the Karlsruhe Institute of Technology: Software</a></li>
+<li><a href="https://www.gfz-potsdam.de/en/section/physics-of-earthquakes-and-volcanoes/infrastructure/tool-development-lab/">GFZ: Wave Physics and Tool</a></li>
+<li><a href="http://www.iearth.edu.au">iEarth</a>: A consortium of scientists from the university,
+government and industry sectors with interests in the development and application
+of inversion methodologies for the Earth Sciences</li>
+<li><a href="https://seiscode.iris.washington.edu">IRIS SeisCode</a></li>
+<li><a href="http://www.mtnet.info/main/source.html">MTNet</a>: Source codes in the electromagnetic community</li>
+<li><a href="http://www.nuquake.eu/Computer_Codes">NuQuake Software</a></li>
+<li><a href="http://www.quest-itn.org/library/software">QUantitative Estimation of Earth&rsquo;s Seismic Sources and STructure (QUEST): Software</a></li>
+<li><a href="http://www.spice-rtn.org/library/software/softwarefolder_view.html">Seismic wave Propagation and Imaging in Complex media: a European network (SPICE) software</a></li>
+<li><a href="http://rses.anu.edu.au/seismology/index.php?p=software">Seismology &amp; Mathematical Geophysics Research Group Software</a>
+(In the Australian National University)</li>
+<li><a href="http://www.seis.sc.edu/software.html">University of South Carolina: Software</a></li>
+<li><a href="https://www.usgs.gov/natural-hazards/earthquake-hazards/software">USGS Software</a></li>
+</ul>
+
+
+      </article>
+      <hr/>
+      <footer>
+  <div class="container text-center">
+  
+    © Copyright 2018 - 2021, seismo-learn.
+  
+  </div>
+  <div class="container text-center">
+  
+    Built by <a href="https://gohugo.io/">Hugo</a> on 2021/06/11.
+  
+  </div>
+</footer>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
