@@ -76,15 +76,17 @@
     <li><a href="#phase-picking">Phase Picking</a></li>
     <li><a href="#single-station-signal-analysis">Single Station Signal Analysis</a></li>
     <li><a href="#array-seismology">Array seismology</a></li>
-    <li><a href="#seismic-data-digitization-and-correction">Seismic data digitization and correction</a></li>
+    <li><a href="#seismic-data-digitization-and-correction">Seismic Data Digitization and Correction</a></li>
     <li><a href="#signal-analysis">Signal Analysis</a></li>
     <li><a href="#pattern-recognition-and-machine-learning">Pattern Recognition and Machine Learning</a></li>
     <li><a href="#spherical-harmonics">Spherical Harmonics</a></li>
-    <li><a href="#tectonics">Tectonics</a></li>
-    <li><a href="#geodesy">Geodesy</a></li>
+    <li><a href="#gravity">Gravity</a></li>
+    <li><a href="#insargps">InSAR/GPS</a></li>
     <li><a href="#geodynamics">Geodynamics</a></li>
     <li><a href="#geophysics">Geophysics</a></li>
-    <li><a href="#thermodynamic-modeling">Thermodynamic modeling</a></li>
+    <li><a href="#tectonics">Tectonics</a></li>
+    <li><a href="#thermodynamic-modeling">Thermodynamic Modeling</a></li>
+    <li><a href="#visualization">Visualization</a></li>
     <li><a href="#inversion-theory">Inversion Theory</a></li>
     <li><a href="#linear-algebra">Linear Algebra</a></li>
     <li><a href="#gradient-methods">Gradient Methods</a></li>
@@ -541,11 +543,25 @@ the simple calculation of H/V ratios</li>
 <ul>
 <li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and visulization software written in Python</li>
 <li><a href="http://www.geopsy.org/download.php">Geopsy</a>: An open source software for geophysical research and application written in C++</li>
+<li><a href="http://diapiro.ictja.csic.es/gt/mschi/SCIENCE/tseries.html#software">ts-PWS</a>:
+Time-scale phase weighted stacking written in C</li>
 </ul>
-<h2 id="seismic-data-digitization-and-correction">Seismic data digitization and correction</h2>
+<h2 id="seismic-data-digitization-and-correction">Seismic Data Digitization and Correction</h2>
 <ul>
-<li><a href="https://seiscode.iris.washington.edu/projects/cwpar-clipped-waveform-pickup-and-restoration">CWPAR</a>: Clipped Waveform Pickup and Restoration</li>
-<li><a href="http://www.seismology.harvard.edu/research/DigitSeis.html">DigitSeis</a>: A Digitization Software for Analog Seismograms, written in Matlab</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/atacr">ATacR</a>: Automated Tilt
+and Compliance Removal (for ocean bottoms seismometers) written in Matlab</li>
+<li><a href="https://github.com/jinhaizhang2020/Automatic-detection-of-clipped-seismic-waveform">Automatic detection of clipped seismic waveform</a>:
+The code seems to be related to <strong>CWPAR</strong>.</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/cwpar-clipped-waveform-pickup-and-restoration">CWPAR</a>:
+Clipped Waveform Pickup and Restoration written in Matlab</li>
+<li><a href="http://www.seismology.harvard.edu/research/DigitSeis.html">DigitSeis</a>:
+A digitization software for analog seismograms written in Matlab</li>
+<li><a href="https://github.com/jbrussell/DLOPy_v1.0">DLOPy</a>: Calculate OBS horizontal
+orientations based on Raleigh-wave arrival angle written in Python</li>
+<li><a href="https://nfsi-canada.github.io/OBStools/">OBStools</a>: Removing vertical
+component noise from tilt and compliance effects written in Python</li>
+<li><a href="https://nfsi-canada.github.io/OrientPy/">OrientPy</a>: Estimate seismometer
+orientation written in Python</li>
 </ul>
 <hr>
 <h2 id="signal-analysis">Signal Analysis</h2>
@@ -576,26 +592,46 @@ An algorithm that detects one-dimensional sequences in complex datasets in Pytho
 <li><a href="https://github.com/SHTOOLS/SHTOOLS">SHTOOLS</a>: Spherical Harmonic Tools</li>
 </ul>
 <hr>
-<h2 id="tectonics">Tectonics</h2>
+<h2 id="gravity">Gravity</h2>
 <ul>
-<li><a href="https://www.earthbyte.org/category/gplates">GPlates</a>: A desktop software for the interactive visualisation of plate-tectonics</li>
+<li><a href="https://www.fatiando.org/harmonica/latest/">Harmonica</a>:
+Forward modeling, inversion, and processing gravity and magnetic data</li>
+<li><a href="https://grav3d.readthedocs.io/en/latest/index.html">GRAV3D</a>:
+Carrying out 3D forward modelling and inversion of gravity data</li>
+<li><a href="https://www.juanafonso.com/software">Gravity modelling and inversion in 2D</a>:
+A very simple matlab code to illustrate the basics of gravity modelling and inversion</li>
+<li><a href="https://github.com/pinga-lab/paper-moho-inversion-tesseroids">moho-inversion-tesseroids</a>:
+Fast non-linear gravity inversion in spherical coordinates with application to
+the South American Moho</li>
+<li><a href="https://github.com/nqdu/SphGraGLQ">SphGraGLQ</a>: A fast and adaptive gravity
+forward computation method by Gauss-Legendre Quadrature in spherical coordinates in C</li>
 </ul>
-<h2 id="geodesy">Geodesy</h2>
+<h2 id="insargps">InSAR/GPS</h2>
 <ul>
-<li><a href="https://www.juanafonso.com/software">Gravity modelling and inversion in 2D</a>: A very simple matlab code to illustrate the basics of gravity modelling and inversion</li>
+<li><a href="https://topex.ucsd.edu/gmtsar/">GMTSAR</a>: An InSAR processing system based on GMT</li>
+<li><a href="https://www.gfz-potsdam.de/en/section/physics-of-earthquakes-and-volcanoes/infrastructure/tool-development-lab/">SDM - Geodetic finite-fault slip inversion</a>:
+Inverting co-seismic surface deformation data (GPS, InSAR, etc.) for fault slip
+distribution written in Fortran</li>
 </ul>
 <h2 id="geodynamics">Geodynamics</h2>
 <ul>
-<li><a href="https://github.com/geodynamics/citcoms">CitcomS</a>: solve compressible thermochemical convection problems relevant to Earth&rsquo;s mantle.</li>
+<li><a href="https://github.com/geodynamics/citcoms">CitcomS</a>: Solve compressible
+thermochemical convection problems relevant to Earth&rsquo;s mantle</li>
 </ul>
 <h2 id="geophysics">Geophysics</h2>
 <ul>
-<li><a href="http://www.seis.sc.edu/software/distaz">distaz</a> | <a href="https://blog.seisman.info/calculate-dist-az-baz">Chinese note</a>:
-Classic codes to calculate distance, azimuth and back-azimuth of any two points
-at the Earth&rsquo;s surface</li>
-<li><a href="http://cpc.cs.qub.ac.uk/summaries/AFAT_v1_0.html">AFAT</a>: Solving the Christoffel equation: phase and group velocities</li>
+<li><a href="http://www.seis.sc.edu/software/distaz">distaz</a> |
+<a href="https://seismo-learn.org/software/utilities/distaz/">A tutorial (in Chinese)</a>:
+Calculate distance, azimuth and back-azimuth of any two points at the Earth&rsquo;s surface</li>
+<li><a href="https://paudetseis.github.io/PlateFlex/">PlateFlex</a>: Estimate lithosphere elstatic
+thickness written in Python and Fortran</li>
 </ul>
-<h2 id="thermodynamic-modeling">Thermodynamic modeling</h2>
+<h2 id="tectonics">Tectonics</h2>
+<ul>
+<li><a href="https://www.earthbyte.org/category/gplates">GPlates</a>: A desktop software for
+the interactive visualisation of plate-tectonics</li>
+</ul>
+<h2 id="thermodynamic-modeling">Thermodynamic Modeling</h2>
 <ul>
 <li><a href="http://www.perplex.ethz.ch/">Perple_X</a> |
 <a href="http://www.perplex.ethz.ch/perplex_thermodynamic_data_file.html">Thermodynamic Data Files</a> | <a href="http://www.perplex.ethz.ch/PerpleX_solution_model_glossary.html">Glossary</a> |
@@ -610,6 +646,13 @@ Calculating model phase equilibria involving the HPx-eos
 and/or individual end-members from the Holland &amp; Powell dataset</li>
 <li><a href="https://burnman.org/">BurnMan</a>: An open source mineral physics toolbox written
 in Python to generate physical properties for the Earth and other planets</li>
+</ul>
+<h2 id="visualization">Visualization</h2>
+<ul>
+<li><a href="https://ww2.mathworks.cn/matlabcentral/fileexchange/49813-matlab-for-analyzing-and-visualizing-geospatial-data">MATLAB for Analyzing and Visualizing Geospatial Data</a></li>
+<li><a href="https://www.ghostscript.com/">Ghostscript</a> |
+<a href="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases">Releases</a>:
+An interpreter for the PostScript language and PDF files</li>
 </ul>
 <hr>
 <h2 id="inversion-theory">Inversion Theory</h2>
