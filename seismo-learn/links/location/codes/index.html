@@ -57,8 +57,9 @@
     <li><a href="#plotting">Plotting</a></li>
     <li><a href="#traveltime-calculationray-tracing">Traveltime Calculation/Ray Tracing</a></li>
     <li><a href="#synthetic-seismograms">Synthetic Seismograms</a></li>
+    <li><a href="#waveform-forward-modelling">Waveform Forward Modelling</a></li>
     <li><a href="#earthquake-detection">Earthquake Detection</a></li>
-    <li><a href="#earthquake-location">Earthquake location</a></li>
+    <li><a href="#earthquake-location">Earthquake Location</a></li>
     <li><a href="#focal-mechanism">Focal Mechanism</a></li>
     <li><a href="#seismicity">Seismicity</a></li>
     <li><a href="#source-spectrum">Source Spectrum</a></li>
@@ -329,6 +330,11 @@ strucure at source side (SEM) and 1D strucure outside the source region (DSM)</l
 Calculating synthetic seismograms involving two-dimensional localized
 hetergeneous structures based on GRT-FD hybrid method</li>
 </ul>
+<h2 id="waveform-forward-modelling">Waveform Forward Modelling</h2>
+<ul>
+<li><a href="https://earth.usc.edu/~ybz/">Yehuda Ben-Zion: Downloads</a>:
+Model point/line dislocation in fault zone</li>
+</ul>
 <hr>
 <h2 id="earthquake-detection">Earthquake Detection</h2>
 <ul>
@@ -350,19 +356,27 @@ of repeating and near-repeating earthquakes written in Python</li>
 implementation of EQcorrscan method</li>
 <li><a href="https://github.com/ahotovec/REDPy">REDPy</a>: Repeating Earthquake Detector written in Python</li>
 </ul>
-<h2 id="earthquake-location">Earthquake location</h2>
+<h2 id="earthquake-location">Earthquake Location</h2>
 <ul>
-<li><a href="https://github.com/dttrugman/GrowClust">GrowClust</a>: Relative relocation for earthquake hypocenters</li>
-<li><a href="https://www.ldeo.columbia.edu/~felixw/hypoDD.html">HypoDD</a>: Double-difference earthquake location</li>
-<li><a href="https://github.com/sun1022/hypoRelocate">HypoRelocate</a>: High-resolution earthquake relocation method</li>
-<li><a href="https://www.usgs.gov/software/hypoinverse-earthquake-location">HYPOINVERSE2000</a>: Locate earthquakes and determine magnitudes in a local or regional seismic network</li>
-<li><a href="https://seiscode.iris.washington.edu/projects/nonlinloc">NonLinLoc</a>: Probabilistic, Non-Linear, Global-Search Earthquake Location in 3D Media.</li>
-<li><a href="https://github.com/Dal-mzhang/REAL">REAL</a>: Rapid Earthquake Association and Location</li>
-<li><a href="https://seg.ethz.ch/software/velest.html">Velest</a>: 1-D inversion of velocities and hypocenter locations
-<ul>
-<li>This code is modified to be used in <a href="https://github.com/Dal-mzhang/REAL">REAL</a></li>
-</ul>
-</li>
+<li><a href="https://github.com/dttrugman/GrowClust">GrowClust</a>: Relative relocation of
+earthquake hypocenters based on waveform cross-correlation data</li>
+<li><a href="https://www.ldeo.columbia.edu/~felixw/hypoDD.html">HypoDD</a>:
+Double-difference earthquake location</li>
+<li><a href="https://github.com/sun1022/hypoRelocate">HypoRelocate</a>:
+High-resolution earthquake relocation method</li>
+<li><a href="https://www.usgs.gov/software/hypoinverse-earthquake-location">HYPOINVERSE2000</a>:
+Locate earthquakes and determine magnitudes in a local or regional seismic network</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/nonlinloc">NonLinLoc</a>
+Probabilistic, non-linear, global-search earthquake location in 3D Media</li>
+<li><a href="https://gitlab.com/dettmer-jan/location-pt">location-pt</a>: Multiple earthquake
+location via parallel tempering and principal component sampling</li>
+<li><a href="https://github.com/interseismic/PhaseLink">PhaseLink</a>:
+A deep learning approach to seismic phase association</li>
+<li><a href="https://github.com/Dal-mzhang/REAL">REAL</a>: <strong>R</strong>apid <strong>E</strong>arthquake
+<strong>A</strong>ssociation and <strong>L</strong>ocation written in C</li>
+<li><a href="https://seg.ethz.ch/software/velest.html">Velest</a> |
+A modified version in <a href="https://github.com/Dal-mzhang/REAL">REAL</a>:
+1-D inversion of velocities and hypocenter locations</li>
 </ul>
 <h2 id="focal-mechanism">Focal Mechanism</h2>
 <ul>
@@ -391,8 +405,12 @@ surface wave dispersion curve et al.</li>
 <h2 id="seismicity">Seismicity</h2>
 <ul>
 <li><a href="https://www.usgs.gov/software/cluster2000">CLUSTER2000</a>: Identify clusters (e.g., aftershocks) in an earthquake catalog</li>
-<li><a href="http://bemlar.ism.ac.jp/zhuang/software.html">sd</a>: <strong>S</strong>tochastic <strong>d</strong>eclustering based on the space-time ETAS model</li>
-<li><a href="http://www.seismo.ethz.ch/en/research-and-teaching/products-software/software/ZMAP">ZMAP</a>: A software package to analyze seismicity</li>
+<li><a href="https://github.com/MatteoTaroniINGV/GR_EST">GR_EST</a>: An OCTAVE/MATLAB toolbox
+to estimate Gutenberg–Richter law parameters and their uncertainties</li>
+<li><a href="http://bemlar.ism.ac.jp/zhuang/software.html">sd</a>: <strong>S</strong>tochastic <strong>d</strong>eclustering
+based on the space-time ETAS model</li>
+<li><a href="http://www.seismo.ethz.ch/en/research-and-teaching/products-software/software/ZMAP">ZMAP</a>:
+A GUI to analyse catalogue data</li>
 </ul>
 <h2 id="source-spectrum">Source Spectrum</h2>
 <ul>
@@ -401,10 +419,15 @@ surface wave dispersion curve et al.</li>
 </ul>
 <h2 id="stressstrain">Stress/Strain</h2>
 <ul>
-<li><a href="https://www.usgs.gov/software/coulomb-3">Coulomb 3</a>: Investigate Coulomb stress changes on mapped faults and earthquake nodal planes</li>
-<li><a href="https://www.usgs.gov/software/satsi">SATSI</a>: Spatially and/or temporally varying stress field from focal mechanisms</li>
-<li><a href="https://www.induced.pl/software">MSATSI</a>: MATLAB package for stress tensor inversion</li>
-<li><a href="https://www.ig.cas.cz/en/stress-inverse">STRESSINVERSE</a>: A Matlab or Python software package for an iterative joint inversion for stress and fault orientations from focal mechanisms</li>
+<li><a href="https://www.usgs.gov/software/coulomb-3">Coulomb 3</a>: Investigate Coulomb stress
+changes on mapped faults and earthquake nodal planes</li>
+<li><a href="https://www.bosai.go.jp/information/dc3d.html">DC3D0/DC3D</a>: Calculate displacement,
+strain and tilt at depth due to a point/rectangular strike/dip/tensile source in a half-space</li>
+<li><a href="https://www.induced.pl/software">MSATSI</a>: Stress tensor inversion written in MATLAB</li>
+<li><a href="https://www.usgs.gov/software/satsi">SATSI</a>: <strong>S</strong>patial <strong>A</strong>nd <strong>T</strong>emporal
+<strong>S</strong>tress <strong>I</strong>nversion from focal mechanisms</li>
+<li><a href="https://www.ig.cas.cz/en/stress-inverse">STRESSINVERSE</a>: An iterative joint
+inversion for stress and fault orientations from focal mechanisms written in MATLAB or Python</li>
 </ul>
 <hr>
 <h2 id="body-wave-tomography">Body-wave Tomography</h2>
@@ -810,7 +833,7 @@ Locating seismic scatterers in the lower mantle, using PKP precursor onsets</li>
 <h2 id="phase-picking">Phase Picking</h2>
 <ul>
 <li><a href="http://rses.anu.edu.au/seismology/soft/astack/index.html">Adaptive Stacking</a> |
-<a href="http://www.iearth.edu.au/codes/AdaptiveStacking">Code at iEarth</a>:
+<a href="http://www.iearth.edu.au/codes/AdaptiveStacking">iEarth</a>:
 Adaptive stacking to estimating traveltime residual patterns across a network of seismic stations</li>
 <li><a href="https://seiscode.iris.washington.edu/projects/pysmo-aimbat">AIMBAT</a>:
 Measuring teleseismic body wave arrival times for large seismic arrays written in Python</li>
