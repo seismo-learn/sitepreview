@@ -65,6 +65,7 @@
     <li><a href="#stressstrain">Stress/Strain</a></li>
     <li><a href="#body-wave-tomography">Body-wave Tomography</a></li>
     <li><a href="#surface-wave-tomography">Surface-wave Tomography</a></li>
+    <li><a href="#rayleigh-wave-ellipticity">Rayleigh-wave Ellipticity</a></li>
     <li><a href="#receiver-function">Receiver Function</a></li>
     <li><a href="#joint-inversion-of-seismological-data">Joint Inversion of Seismological Data</a></li>
     <li><a href="#waveform-inversion">Waveform Inversion</a></li>
@@ -382,8 +383,12 @@ surface wave dispersion curve et al.</li>
 <h2 id="seismicity">Seismicity</h2>
 <ul>
 <li><a href="https://www.usgs.gov/software/cluster2000">CLUSTER2000</a>: Identify clusters (e.g., aftershocks) in an earthquake catalog</li>
-<li><a href="http://bemlar.ism.ac.jp/zhuang/software.html">sd</a>: <strong>S</strong>tochastic <strong>d</strong>eclustering based on the space-time ETAS model</li>
-<li><a href="http://www.seismo.ethz.ch/en/research-and-teaching/products-software/software/ZMAP">ZMAP</a>: A software package to analyze seismicity</li>
+<li><a href="https://github.com/MatteoTaroniINGV/GR_EST">GR_EST</a>: An OCTAVE/MATLAB toolbox
+to estimate Gutenberg–Richter law parameters and their uncertainties</li>
+<li><a href="http://bemlar.ism.ac.jp/zhuang/software.html">sd</a>: <strong>S</strong>tochastic <strong>d</strong>eclustering
+based on the space-time ETAS model</li>
+<li><a href="http://www.seismo.ethz.ch/en/research-and-teaching/products-software/software/ZMAP">ZMAP</a>:
+A GUI to analyse catalogue data</li>
 </ul>
 <h2 id="source-spectrum">Source Spectrum</h2>
 <ul>
@@ -392,10 +397,15 @@ surface wave dispersion curve et al.</li>
 </ul>
 <h2 id="stressstrain">Stress/Strain</h2>
 <ul>
-<li><a href="https://www.usgs.gov/software/coulomb-3">Coulomb 3</a>: Investigate Coulomb stress changes on mapped faults and earthquake nodal planes</li>
-<li><a href="https://www.usgs.gov/software/satsi">SATSI</a>: Spatially and/or temporally varying stress field from focal mechanisms</li>
-<li><a href="https://www.induced.pl/software">MSATSI</a>: MATLAB package for stress tensor inversion</li>
-<li><a href="https://www.ig.cas.cz/en/stress-inverse">STRESSINVERSE</a>: A Matlab or Python software package for an iterative joint inversion for stress and fault orientations from focal mechanisms</li>
+<li><a href="https://www.usgs.gov/software/coulomb-3">Coulomb 3</a>: Investigate Coulomb stress
+changes on mapped faults and earthquake nodal planes</li>
+<li><a href="https://www.bosai.go.jp/information/dc3d.html">DC3D0/DC3D</a>: Calculate displacement,
+strain and tilt at depth due to a point/rectangular strike/dip/tensile source in a half-space</li>
+<li><a href="https://www.induced.pl/software">MSATSI</a>: Stress tensor inversion written in MATLAB</li>
+<li><a href="https://www.usgs.gov/software/satsi">SATSI</a>: <strong>S</strong>patial <strong>A</strong>nd <strong>T</strong>emporal
+<strong>S</strong>tress <strong>I</strong>nversion from focal mechanisms</li>
+<li><a href="https://www.ig.cas.cz/en/stress-inverse">STRESSINVERSE</a>: An iterative joint
+inversion for stress and fault orientations from focal mechanisms written in MATLAB or Python</li>
 </ul>
 <hr>
 <h2 id="body-wave-tomography">Body-wave Tomography</h2>
@@ -570,7 +580,7 @@ A training code to calculation of phase velocity dispersion curves</li>
 <li><a href="https://github.com/bgoutorbe/seismic-noise-tomography">seismic-noise-tomography</a>:
 Python framework for seismic noise tomography</li>
 </ul>
-<h3 id="rayleigh-wave-ellipticity">Rayleigh-wave Ellipticity</h3>
+<h2 id="rayleigh-wave-ellipticity">Rayleigh-wave Ellipticity</h2>
 <ul>
 <li><a href="http://diapiro.ictja.csic.es/gt/mschi/SCIENCE/tseries.html#software">DOP-E</a> |
 <a href="https://github.com/berbellini/DOP-E">GitHub</a>:
@@ -579,34 +589,69 @@ Rayleigh wave ellipticity, measurement and inversion from ambient noise written 
 from earthquake data written in Python</li>
 </ul>
 <h2 id="receiver-function">Receiver Function</h2>
-<h3 id="synthetic-rf">Synthetic RF</h3>
 <ul>
-<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">hk</a>: Receiver function package (synthetic RF, deconvolution, and H-k stacking) | <a href="https://blog.seisman.info/hk-install">Chinese note</a></li>
-<li><a href="https://home.cc.umanitoba.ca/~frederik/Software">RAYSUM</a>: Ray-theoretical modelling of teleseismic waves in dipping, anisotropic structures</li>
+<li><a href="https://github.com/trichter/rf">rf</a>: Receiver function calculation in seismology written in Python</li>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">hk</a> |
+<a href="https://blog.seisman.info/hk-install">Chinese note</a>:
+Receiver function package (synthetic RF, deconvolution, and H-k stacking)</li>
 <li><a href="http://www.eas.slu.edu/eqc/eqccps.html">CPS330</a> |
 <a href="https://seismo-learn.org/software/cps/">A tutorial (in Chinese)</a>:
 Collection of programs for calculating theorectical seismogram, receiver function,
 surface wave dispersion curve et al.</li>
-<li><a href="https://seiscode.iris.washington.edu/projects/rfsyn">RF software</a>: Computes a receiver-function for a stack of anisotropic layers over an isotropic halfspace, via a reflectivity algorithm, assuming a plane wave incident from below | <a href="https://www.ldeo.columbia.edu/~vadim/RF/RF-manual.html">Manual</a> | <a href="http://jparkcodes.blogspot.com">Some updates at JParkCodes</a></li>
-<li><a href="https://members.elsi.jp/~george/rftool.html">RFtool</a>: An interactive, GUI-based tool to simulate P or S receiver functions</li>
+<li><a href="https://home.cc.umanitoba.ca/~frederik/Software">RAYSUM</a>:
+Ray-theoretical modelling of teleseismic waves in dipping, anisotropic structures</li>
+<li><a href="https://github.com/rmartinshort/RecieverFunctions">RF codes from some famous group codes</a>
+<ul>
+<li>Charles J. Ammon&rsquo;s codes</li>
+<li>Cheng&rsquo;s codes, including Qingju Wu&rsquo;s maximum entrop deconvolution method (<code>burgays</code>)</li>
+</ul>
+</li>
+<li>Charles J. Ammon&rsquo;s RF codes:
+<a href="http://eqseis.geosc.psu.edu/cammon/HTML/RftnDocs/rftn01.html">An Overview of Receiver-Function Analysis</a></li>
+<li>Jeffrey Park&rsquo;s RF codes |
+<a href="https://www.ldeo.columbia.edu/~vadim/RF/RF-manual.html">Manual</a> |
+<a href="http://jparkcodes.blogspot.com">Updates</a>:
+<ul>
+<li><a href="https://seiscode.iris.washington.edu/projects/rfsyn">RF software</a>:
+Computes a receiver-function for a stack of anisotropic layers over an isotropic halfspace</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/recfunk09-pick">recfunk09_pick</a></li>
+<li><a href="https://seiscode.iris.washington.edu/projects/recfunk-ascii">recfunk_ascii</a></li>
+</ul>
+</li>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">CCP</a> |
+<a href="https://blog.seisman.info/ccp-install">Chinses note</a>:
+Common-Conversion-Point (CCP) stacking of receiver functions</li>
+<li><a href="https://faculty.sustech.edu.cn/?p=39425&amp;tagid=yucq&amp;cat=5&amp;iscss=1&amp;snapid=1&amp;lang=en">CrazySeismic</a> |
+<a href="https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae">linkresearcher</a> |
+<a href="https://www.bilibili.com/video/BV1e54y1i7FM?p=3">bilibili</a>:
+A MATLAB GUI-based package to process single channel seismic data (picking, McCC, PCA, Deconvolution)</li>
+<li><a href="https://seiscode.iris.washington.edu/projects/funclab">FuncLab</a> (invalid link) |
+<a href="https://seiscode.iris.washington.edu/projects/funclab-revised">revised FuncLab</a>:
+A Matlab based GUI for handling receiver functions</li>
+<li><a href="https://github.com/ljt-uiuc/H-k-c">h-k c</a> |
+<a href="https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae">linkresearcher</a> |
+<a href="https://www.bilibili.com/video/av841708479?p=3">bilibili</a>:
+Generalized H-k after harmonic correction on receiver functions</li>
+<li><a href="http://www.iearth.org.au/codes/IRFFM/">IRFFM</a>: An interactive Java program for
+joint interactive forward modelling of teleseismic receiver functions and surface wave dispersion</li>
+<li><a href="https://github.com/iwbailey/processRFmatlab">processRFmatlab</a>:
+MATLAB functions and scripts for working with receiver functions</li>
+<li><a href="https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae">psdm</a> |
+<a href="https://www.bilibili.com/video/av841708479?p=2">bilibili</a>:
+A wave equation migration method for receiver function imaging</li>
 <li><a href="http://geophysics.geo.sunysb.edu/wen/resource/index.html">PSV Hybrid RF</a> |
 <a href="https://github.com/Geolab-USTC/PSV_Hybrid_RF">GitHub</a>:
 Calculating synthetic RF in two-dimensional localized hetergeneous structures
 based on PSV Hybrid method (GRT-FD)</li>
-</ul>
-<h3 id="rf-measurements-and-inversion">RF measurements and inversion</h3>
-<ul>
-<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">hk</a>: Receiver function package (deconvolution and H-k stacking) | <a href="https://blog.seisman.info/hk-install">Chinese note</a></li>
-<li><a href="https://seiscode.iris.washington.edu/projects/rfsyn">RF software</a>: Computes a receiver-function for a stack of anisotropic layers over an isotropic halfspace, via a reflectivity algorithm, assuming a plane wave incident from below | <a href="https://www.ldeo.columbia.edu/~vadim/RF/RF-manual.html">Manual</a> | <a href="http://jparkcodes.blogspot.com">Some updates at JParkCodes</a></li>
-<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">CCP</a>: Common-Conversion-Point (CCP) stacking of receiver functions | <a href="https://blog.seisman.info/ccp-install">Chinses note</a></li>
-<li><a href="http://www.iearth.org.au/codes/rj-RF">rj-RF</a>: Inversion of Receiver Functions using Reversible jump Markov chain Monte Carlo algorithm</li>
-<li><a href="http://rses.anu.edu.au/~hrvoje/IRFFMv1.1.html">IRFFM</a>: An interactive Java program for joint interactive forward modelling of teleseismic receiver functions and surface wave dispersion</li>
-<li><a href="http://faculty.sustech.edu.cn/wp-content/uploads/2020/08/2020080323260850.zip">CrazySeismic</a>: A MATLAB GUI-based package to process single channel seismic data (picking, McCC, PCA, Deconvolution)</li>
-<li><a href="https://seiscode.iris.washington.edu/projects/funclab">FuncLab</a>: a Matlab based GUI for handling receiver functions (link does work) | <a href="https://seiscode.iris.washington.edu/projects/funclab-revised">revised FuncLab</a></li>
-<li><a href="https://github.com/iwbailey/processRFmatlab">processRFmatlab</a>: matlab functions and scripts for working with receiver functions</li>
-<li><a href="https://github.com/trichter/rf">rf</a>: Receiver function calculation in seismology, written in Python</li>
-<li><a href="https://github.com/xumi1993/SplitRFLab">SplitRFLab</a>: A Matlab toolbox of processing receiver functions and shear wave spliting modified from <a href="http://splitting.gm.univ-montp2.fr">Splitlab</a> and <a href="https://github.com/iwbailey/processRFmatlab">processRFmatlab</a></li>
-<li><a href="https://github.com/rmartinshort/RecieverFunctions">Some group codes for RF analysis</a>: Ammon&rsquo;s &amp; Cheng&rsquo;s codes</li>
+<li><a href="https://github.com/akuhara/RF_INV">RF_INV</a>: Receiver function inversion by
+reversible-jump Markov-chain Monte Carlo written in Fortran</li>
+<li><a href="https://paudetseis.github.io/RfPy/">RfPy</a>: Receiver function caculcation along with post-processing
+(e.g., hk, harmonic decompositino, CCP) written in Python</li>
+<li><a href="http://www.iearth.org.au/codes/rj-RF">rj-RF</a>: Receiver Function Inversion
+using Reversible jump Markov chain Monte Carlo algorithm</li>
+<li><a href="https://members.elsi.jp/~george/rftool.html">RFtool</a>: An interactive GUI tool to simulate P or S receiver functions</li>
+<li><a href="https://github.com/xumi1993/SplitRFLab">SplitRFLab</a>: A Matlab toolbox of processing
+receiver functions and shear wave spliting</li>
 </ul>
 <h2 id="joint-inversion-of-seismological-data">Joint Inversion of Seismological Data</h2>
 <ul>
@@ -770,8 +815,10 @@ Locating seismic scatterers in the lower mantle, using PKP precursor onsets</li>
 Adaptive stacking to estimating traveltime residual patterns across a network of seismic stations</li>
 <li><a href="https://seiscode.iris.washington.edu/projects/pysmo-aimbat">AIMBAT</a>:
 Measuring teleseismic body wave arrival times for large seismic arrays written in Python</li>
-<li><a href="https://faculty.sustech.edu.cn/?p=39425&amp;tagid=yucq&amp;cat=5&amp;iscss=1&amp;snapid=1&amp;lang=en">CrazySeismic</a>:
-A MATLAB GUI-based package to process single channel seismic data</li>
+<li><a href="https://faculty.sustech.edu.cn/?p=39425&amp;tagid=yucq&amp;cat=5&amp;iscss=1&amp;snapid=1&amp;lang=en">CrazySeismic</a> |
+<a href="https://www.linkresearcher.com/trainings/d65fe2ef-3cc8-4eef-9821-261e3d49a9ae">linkresearcher</a> |
+<a href="https://www.bilibili.com/video/BV1e54y1i7FM?p=3">bilibili</a>:
+A MATLAB GUI-based package to process single channel seismic data (picking, McCC, PCA, Deconvolution)</li>
 <li><a href="https://www.kevinchao.com/crazytremor">CrazyTremor</a>:
 A MATLAB GUI-based package to display and picking multi-channel seismic data</li>
 <li><a href="https://github.com/interseismic/generalized-phase-detection">generalized-phase-detection</a>:
