@@ -110,22 +110,53 @@
 <h1>Scientific Research Codes</h1>
 <h2 id="data-request-tools">Data Request Tools</h2>
 <ul>
-<li><a href="http://www.seis.sc.edu/sod">SOD</a>: the best seismic data request tool. |
-<a href="https://blog.seisman.info/sod-notes/">Tutorial (in Chinese)</a> |
-<a href="https://github.com/seisman/SODrecipes">Recipes</a></li>
-<li><a href="https://github.com/obspy/obspy/wiki">ObsPy</a>: Data download, processing and visulization software written in Python</li>
-<li><a href="https://seisman.github.io/HinetPy/">HinetPy</a>: Request and process Hi-net data, written in Python</li>
-<li><a href="https://seiscode.iris.washington.edu/projects/ws-fetch-scripts">Web Service Fetch scripts</a>: Data request scripts written in Perl |
-<a href="https://blog.seisman.info/web-service-fetch-scripts/">Chinese note</a></li>
-<li><a href="http://service.iris.edu/">IRIS DMC Web Services</a>: IRIS Web service for requesting seismic data</li>
-<li><a href="http://ds.iris.edu/ds/nodes/dmc/software/downloads/jweed/">jweed</a>: Data request client written in Java</li>
-<li><a href="http://ds.iris.edu/ds/nodes/dmc/manuals/breq_fast/">BREQ_FAST</a>: Seismic data request by sending email |
-<a href="https://blog.seisman.info/tags/breq_fast/">Chinese note</a></li>
-<li><a href="http://www.iris.edu/wilber3/find_event">IRIS Wilber 3</a>: A web GUI to request waveform data of individual seismic events |
-<a href="https://blog.seisman.info/wilber3/">Chinese note</a></li>
-<li><a href="https://iris-edu.github.io/rover">ROVER</a>: A command line tool to robustly retrieve geophysical timeseries data from data centers</li>
-<li><a href="https://www.usgs.gov/software/strongmotion-fetch">StrongMotion Fetch</a>: Download and/or process strong motion data from various networks</li>
-<li><a href="https://github.com/kasra-hosseini/obspyDMT">obspyDMT</a>: A Python Toolbox for Retrieving, Processing and Management of Seismological Datasets</li>
+<li><a href="http://www.fdsn.org/webservices">FDSN Web Services</a> |
+<a href="https://blog.seisman.info/web-service-clients">A note in Chinese</a></li>
+<li><a href="https://ds.iris.edu/ds/nodes/dmc/">IRIS Data Management Center (DMC)</a>
+<ul>
+<li><a href="http://service.iris.edu">Web Services</a>:
+<a href="http://service.iris.edu/fdsnws/">FDSNWS</a> |
+<a href="http://service.iris.edu/irisws/">IRISWS</a> |
+<a href="http://service.iris.edu/ph5ws/">PH5WS</a>,
+<a href="https://ds.iris.edu/ds/nodes/dmc/tutorials/accessing-ph5-archive-with-fetchdata/">Tutorials</a>,
+<a href="https://github.com/PIC-IRIS/PH5/wiki">wiki</a> |
+<a href="http://service.iris.edu/clients/">clients</a>: e.g.,
+<a href="https://seiscode.iris.washington.edu/projects/ws-fetch-scripts">Web Service Fetch scripts</a> with
+<a href="https://blog.seisman.info/web-service-fetch-scripts">A note in Chinese</a></li>
+<li><a href="https://iris-edu.github.io/rover">ROVER</a>: A command line tool to robustly
+retrieve geophysical timeseries data from data centers</li>
+<li><a href="http://ds.iris.edu/ds/nodes/dmc/manuals/breq_fast">BREQ_FAST</a> |
+<a href="https://blog.seisman.info/tags/breq_fast">notes in Chinese</a>:
+Seismic data request by sending email</li>
+<li><a href="http://ds.iris.edu/wilber3/find_event">IRIS Wilber 3</a> |
+<a href="https://blog.seisman.info/wilber3">A note in Chinese</a>:
+A web GUI to request waveform data of individual seismic events</li>
+<li><a href="http://ds.iris.edu/ds/nodes/dmc/software/downloads/jweed">jweed</a>:
+Data request client written in Java</li>
+</ul>
+</li>
+<li><a href="http://www.seis.sc.edu/sod">SOD</a> |
+<a href="https://seismo-learn.org/software/sod/">Tutorial (in Chinese)</a> |
+<a href="https://github.com/seismo-learn/SOD-recipes">Recipes</a>:
+The best seismic data request tool</li>
+<li><a href="https://github.com/obspy/obspy/wiki">ObsPy</a>:
+Data download, processing and visulization software written in Python</li>
+<li><a href="http://www.iris.edu/ds/nodes/dmc/forms/sac/">SAC</a> |
+<a href="https://seisman.github.io/SAC_Docs_zh/">Chinese Manual</a> |
+<a href="https://ds.iris.edu/files/sac-manual/">English Manual</a> |
+<a href="https://www.youtube.com/watch?v=zZeUvHkOOAM&amp;list=PLD4D607C2FA317E6D&amp;index=147">youtube</a> |
+<a href="https://blog.seisman.info/conversion-of-different-sac-formats">notes in Chinese</a>:
+The most commonly used seismic data processing and plotting software</li>
+<li><a href="https://github.com/seisman/FnetPy">FnetPy</a>:
+A Python package to request seismic waveform data from F-net</li>
+<li><a href="https://seisman.github.io/HinetPy/">HinetPy</a>:
+Request and process Hi-net data, written in Python</li>
+<li><a href="https://github.com/kasra-hosseini/obspyDMT">obspyDMT</a>: A Python Toolbox
+for Retrieving, Processing and Management of Seismological Datasets</li>
+<li><a href="https://github.com/jpjones76/SeisIO.jl">SeisIO.jl</a>:
+Julia language support for geophysical time series data</li>
+<li><a href="https://www.usgs.gov/software/strongmotion-fetch">StrongMotion Fetch</a>:
+Download and/or process strong motion data from various networks</li>
 </ul>
 <h2 id="seismic-data-format-conversion">Seismic Data Format Conversion</h2>
 <ul>
@@ -176,19 +207,47 @@ research and application written in C++</li>
 <hr>
 <h2 id="plotting">Plotting</h2>
 <ul>
-<li><a href="https://www.generic-mapping-tools.org/">Generic Mapping Tools (GMT)</a>: the most popular mapping tools in Earth Science</li>
+<li><a href="https://www.generic-mapping-tools.org/">Generic Mapping Tools (GMT)</a>:
+The most popular mapping tools in Earth Science
+<ul>
+<li><a href="https://gmt-china.org">GMT China Community</a> | <a href="https://docs.gmt-china.org/latest/">Reference Manual (in Chinese)</a></li>
+<li><a href="https://github.com/GenericMappingTools/try-gmt">try-GMT</a>:
+Try <code>GMT</code>, <code>PyGMT</code>, and <code>GMT.jl</code> online! All in one place!</li>
+<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">pssac</a> |
+<a href="https://blog.seisman.info/tags/pssac">notes (in Chinese)</a> |
+<a href="https://blog.seisman.info/tags/pssac2">pssac2</a>:
+GMT4-style SAC trace plotting</li>
+</ul>
+</li>
 <li><a href="https://www.pygmt.org">PyGMT</a>: Python interface of GMT (still under development)</li>
-<li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and visulization software written in Python</li>
-<li><a href="http://www.isti2.com/JPlotResp/">JPlotResp</a>: Plot amplitude and phase of instrumental responses in RESP format. | <a href="https://blog.seisman.info/jplotresp">Chinese note</a></li>
-<li><a href="http://www.larskrieger.de/mopad/">MoPad</a>: Analysis and visulization of seismic moment tensor, focal mechanism. | <a href="https://blog.seisman.info/mopad">Chinese note</a></li>
-<li><a href="https://docs.obspy.org/packages/autogen/obspy.imaging.scripts.mopad.html">obspy-mopad</a>: similar to MoPad, provided by ObsPy</li>
-<li><a href="http://www.eas.slu.edu/People/LZhu/home.html">pssac</a>: GMT-style SAC trace plotting for GMT4 | <a href="https://blog.seisman.info/tags/pssac">pssac notes</a></li>
-<li><a href="https://github.com/stephaniedurand/SeisTomoPy">SeisTomoPy</a>: Visulization of 3D tomography models and calculate traveltime in 3D model</li>
-<li><a href="https://www.earth.ox.ac.uk/~smachine/cgi/index.php">SubMachine</a>: Web-Based Tools for Exploring Seismic Tomography and Other Models of Earth’s Deep Interior</li>
-<li><a href="http://www.iearth.org.au/codes/Tomoeye">Tomoeye</a>: a set of programs for tomographic model visualization written in MatLab 6.1 script</li>
-<li><a href="https://www.usgs.gov/software/3d-focal-mechanisms">3D Focal Mechanisms</a>: View earthquake focal mechanism symbols three dimensionally</li>
-<li><a href="https://github.com/iris-edu/EMC-ParaView">EMC-ParaView</a>: A set of Python programmable filters/sources to allow ParaView open-source, multi-platform data analysis and visualization application to display EMC netCDF/GeoCSV models along with other auxiliary Earth data.</li>
+<li><a href="https://github.com/GenericMappingTools/GMT.jl">GMT.jl</a>: GMT Library Wrapper for Julia</li>
+<li><a href="https://matplotlib.org/">matplotlib</a>: A comprehensive library for creating
+static, animated, and interactive visualizations in Python</li>
+<li><a href="https://github.com/obspy/obspy">ObsPy</a>: Data download, processing and
+visulization software written in Python</li>
+<li><a href="https://docs.obspy.org/packages/autogen/obspy.imaging.scripts.mopad.html">obspy.imaging.scripts.mopad</a>:
+MoPaD command line utility</li>
+<li><a href="http://www.larskrieger.de/mopad/">MoPad</a> |
+<a href="https://blog.seisman.info/mopad">A note in Chinese</a>:
+Moment tensor Plotting and Decomposition</li>
+<li><a href="https://www.usgs.gov/software/3d-focal-mechanisms">3D Focal Mechanisms</a>:
+View earthquake focal mechanism symbols three dimensionally</li>
+<li><a href="http://ds.iris.edu/ds/products/emc-desktoptools/">EMC-DesktopTools</a>
+<ul>
+<li><a href="https://github.com/iris-edu/EMC-ParaView">EMC-ParaView</a>: A set of Python
+programmable filters/sources to allow ParaView open-source, multi-platform
+data analysis and visualization application to display EMC netCDF/GeoCSV models
+along with other auxiliary Earth data</li>
+</ul>
+</li>
 <li><a href="http://ds.iris.edu/dms/products/emc/horizontalSlice.html">EMC visualization tools</a></li>
+<li><a href="https://github.com/stephaniedurand/SeisTomoPy">SeisTomoPy</a>:
+Visulization of 3D tomography models and calculate traveltime in 3D model</li>
+<li><a href="https://www.earth.ox.ac.uk/~smachine/cgi/index.php">SubMachine</a>:
+Web-based tools for the interactive visualisation, analysis, and quantitative
+comparison of global-scale, volumetric (3-D) data sets of the subsurface</li>
+<li><a href="http://www.iearth.org.au/codes/Tomoeye">Tomoeye</a>: A set of programs for
+tomographic model visualization written in MatLab 6.1 script</li>
 </ul>
 <hr>
 <h2 id="traveltime-calculationray-tracing">Traveltime Calculation/Ray Tracing</h2>
@@ -1211,6 +1270,7 @@ A simple NA implementation in c++</li>
 government and industry sectors with interests in the development and application
 of inversion methodologies for the Earth Sciences</li>
 <li><a href="https://seiscode.iris.washington.edu">IRIS SeisCode</a></li>
+<li><a href="https://www.isti.com/software">ISTI: software</a>: Instrumental Software Technologies, Inc.</li>
 <li><a href="https://www.gpi.kit.edu/english/498.php">KIT Geophysical Institute: Software</a>:
 Finite-difference numerical methods and full waveform inversion software
 developed by the geophysical institute of the Karlsruhe Institute of Technology</li>
