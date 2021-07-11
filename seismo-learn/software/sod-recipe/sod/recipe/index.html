@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>配置文件 &mdash; 地震“学”软件</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="next" title="TauP" href="../../taup/" />
+    <link rel="prev" title="安装" href="../install/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> 地震“学”软件
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">地震学软件</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cps/">CPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fk/">fk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gcap3d/">gCAP3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gmt/">GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hinetpy/">HinetPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../obspy/">ObsPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sac/">SAC</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">SOD</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">配置文件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">首次运行</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">命令行语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">运行示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sod">SOD 数据库文件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#recipe">Recipe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xml">XML 文档格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Recipe 结构</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../taup/">TauP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实用工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../template/">教程模板</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../anaconda/">Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/contributing/"><i class="fa fa-edit fa-fw"></i> 贡献指南</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">地震“学”软件</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">SOD</a> &raquo;</li>
+        
+      <li>配置文件</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/software/blob/main/source/sod/recipe.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>配置文件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>本文只介绍命令 <code class="docutils literal notranslate"><span class="pre">sod</span></code> 的用法。</p>
+<div class="section" id="id2">
+<h2>首次运行<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>命令行语法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>运行 SOD 的命令行语法很简单:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sod -f recipe.xml
+</pre></div>
+</div>
+<p>其中 <code class="file docutils literal notranslate"><span class="pre">recipe.xml</span></code> 是 SOD 的配置文件。SOD 的配置文件称为 recipe，是一个 XML 格式的纯文本文件，其中定义了地震数据筛选的一系列规则。</p>
+</div>
+<div class="section" id="id4">
+<h3>运行示例<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>执行 <code class="docutils literal notranslate"><span class="pre">sod</span> <span class="pre">--demo</span> <span class="pre">-r</span> <span class="pre">&gt;</span> <span class="pre">demo.xml</span></code> 会生成一个名为 <code class="file docutils literal notranslate"><span class="pre">demo.xml</span></code> 的 recipe 示例，用编辑器查看其内容以对 recipe 的结构和格式有个初步印象。</p>
+<p>执行以下命令则会运行该示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sod -f demo.xml
+Congratulations, valid recipe.
+Fiji region (-20.6, -177.7) 378 km 2003/01/04 05:15:03 UTC 6.5 mwc
+...
+Channel: II.AAK.00.BHE
+...
+Got 1 seismograms for II.RPN.00.BHN for eq on 2003/01/09 02:50:45 UTC
+...
+</pre></div>
+</div>
+<p>输出中的 <code class="docutils literal notranslate"><span class="pre">Congratulations,</span> <span class="pre">valid</span> <span class="pre">recipe.</span></code> 表明当前 recipe 可以使用。紧接着会输出事件信息、通道信息以及获取地震波形的信息。下载的地震波形数据保存在 <code class="file docutils literal notranslate"><span class="pre">seismograms</span></code> 目录下。</p>
+</div>
+<div class="section" id="sod">
+<h3>SOD 数据库文件<a class="headerlink" href="#sod" title="永久链接至标题">¶</a></h3>
+<p>每次执行 SOD 时，SOD 都会在当前目录下生成一个数据库文件夹 <code class="file docutils literal notranslate"><span class="pre">SodDb</span></code> 以及一些 log 文件。数据库文件夹 <code class="file docutils literal notranslate"><span class="pre">SodDb</span></code> 的数据库文件中包含了单次 SOD 运行时的全部信息，如选中了哪些事件、哪些台站以及事件台站对所对应的波形，也包含了哪些数据已经下载哪些数据尚未下载的信息。</p>
+<p>SOD 数据库的主要作用是：若 SOD 在下载数据过程中意外退出，可以重新执行 SOD 命令，由于 SOD 数据库中记录了哪些数据已经被下载，因而 SOD 可以继续下载那些尚未被下载的数据，即实现断点续传的功能。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>实测中发现的确可以断点续传，但似乎在所有数据下载完成后程序无法正常退出。</p>
+</div>
+</div>
+</div>
+<div class="section" id="recipe">
+<h2>Recipe<a class="headerlink" href="#recipe" title="永久链接至标题">¶</a></h2>
+<p>一个 SOD recipe 中包含了一系列规则以限定要申请的数据的范围。</p>
+<div class="section" id="xml">
+<h3>XML 文档格式<a class="headerlink" href="#xml" title="永久链接至标题">¶</a></h3>
+<p>SOD recipe 本质上是一个 xml 格式的文本文件。XML 文档形成了一种“树”结构，它从“根部”开始，不断扩展到“枝叶”。一个简单的 XML 文件如下：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+    <span class="c">&lt;!-- this is a comment --&gt;</span>
+    <span class="nt">&lt;child&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Child One<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;age&gt;</span>10<span class="nt">&lt;/age&gt;</span>
+    <span class="nt">&lt;/child&gt;</span>
+    <span class="nt">&lt;child&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Child Two<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;age&gt;</span>8<span class="nt">&lt;/age&gt;</span>
+    <span class="nt">&lt;/child&gt;</span>
+    <span class="nt">&lt;printline/&gt;</span>
+<span class="nt">&lt;/root&gt;</span>
+</pre></div>
+</div>
+<p>其中：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;?xml</span> <span class="pre">version=&quot;1.0&quot;?&gt;</span></code> 是 XML 声明，其指定了 XML 的版本信息</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;root&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;/root&gt;</span></code> 是一对标签的开始标签和关闭标签，从开始标签到结束标签中的内容称之为元素</p></li>
+<li><p>所有 XML 元素都必须有关闭标签</p></li>
+<li><p>标签可以嵌套多层，但必须正确地嵌套</p></li>
+<li><p>若某个标签中没有嵌套其他标签，则一对标签可以简写为 <code class="docutils literal notranslate"><span class="pre">&lt;tagName/&gt;</span></code> 的形式，例如 <code class="docutils literal notranslate"><span class="pre">&lt;printline/&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">--&gt;</span></code> 用于注释</p></li>
+<li><p>XML 标签是区分大小写的</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Recipe 结构<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>SOD recipe 是 XML 格式的文件，其根标签为 <code class="docutils literal notranslate"><span class="pre">&lt;sod&gt;</span></code>，根标签下有五个直系子标签，分别是：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code>：SOD 程序相关的属性配置（一般不用）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventArm</span></code>：事件筛选的规则</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkArm</span></code>：台站/通道筛选的规则</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waveformArm</span></code>：确定波形的时间段，筛选、下载并处理波形数据</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waveformVectorArm</span></code>：处理三分量波形数据（不常用）</p></li>
+</ul>
+<p>通常只需要用到 <code class="docutils literal notranslate"><span class="pre">eventArm</span></code>、<code class="docutils literal notranslate"><span class="pre">networkArm</span></code> 和 <code class="docutils literal notranslate"><span class="pre">waveformArm</span></code>。显然，<code class="docutils literal notranslate"><span class="pre">eventArm</span></code> 和 <code class="docutils literal notranslate"><span class="pre">networkArm</span></code> 是互相独立的，而 <code class="docutils literal notranslate"><span class="pre">waveformArm</span></code> 则依赖于 <code class="docutils literal notranslate"><span class="pre">eventArm</span></code> 和 <code class="docutils literal notranslate"><span class="pre">networkArm</span></code>。</p>
+<a class="reference internal image-reference" href="http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png"><img alt="SOD recipe 的结构" class="align-center" src="http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png" style="width: 60%;" /></a>
+<p>因而，所有的 recipe 都符合如下基本结构：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sod&gt;</span>
+    <span class="nt">&lt;properties&gt;</span>
+    <span class="c">&lt;!-- sod 属性，很少使用 --&gt;</span>
+    <span class="nt">&lt;/properties&gt;</span>
+
+    <span class="nt">&lt;eventArm&gt;</span>
+    <span class="c">&lt;!-- eventArm 全部内容 --&gt;</span>
+    <span class="nt">&lt;/eventArm&gt;</span>
+
+    <span class="nt">&lt;networkArm&gt;</span>
+    <span class="c">&lt;!-- networkArm 全部内容 --&gt;</span>
+    <span class="nt">&lt;/networkArm&gt;</span>
+
+    <span class="nt">&lt;waveformArm&gt;</span>
+    <span class="c">&lt;!-- waveformArm 全部内容 --&gt;</span>
+    <span class="nt">&lt;/waveformArm&gt;</span>
+
+    <span class="nt">&lt;waveformVectorArm&gt;</span>
+    <span class="c">&lt;!-- waveformVectorArm 全部内容 --&gt;</span>
+    <span class="nt">&lt;/waveformVectorArm&gt;</span>
+<span class="nt">&lt;/sod&gt;</span>
+</pre></div>
+</div>
+<p>下面会介绍 eventArm、networkArm 和 waveformArm 的写法和功能。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../taup/" class="btn btn-neutral float-right" title="TauP" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../install/" class="btn btn-neutral float-left" title="安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 07 月 11 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
