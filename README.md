@@ -19,7 +19,7 @@ The URL scheme is:
 
 ## Cleanup
 
-The [workflow](.github/workflows/cleanup.yaml) runs daily to:
+The [cleanup workflow](.github/workflows/cleanup.yaml) runs daily to:
 
 1. Delete the documentation if the corresponding branch was already deleted
 2. Generate an index file, which lists all documentations of current open PRs
