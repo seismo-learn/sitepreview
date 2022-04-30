@@ -2,7 +2,7 @@ name: Clean up
 
 on:
   # Enable "pull_request" for testing
-  # pull_request:
+  pull_request:
   # daily jobs
   schedule:
     - cron: '0 0 * * *'
