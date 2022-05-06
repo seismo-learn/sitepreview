@@ -10,7 +10,7 @@ of other repositories, so that we can preview the changes in PRs.
 
 The [`preview-pr.yml`](https://github.com/seismo-learn/seismology101/blob/main/.github/workflows/preview-pr.yml)
 workflow is triggered in PRs. It builds and pushes the documentation to the
-to the `gh-pages` branch of this repository, and creates/updates a comment
+`gh-pages` branch of this repository, and creates/updates a comment
 with the preview URL link.
 
 The URL scheme is:
