@@ -42,7 +42,7 @@ jobs:
           touch .nojekyll
 
           # generate TOC
-          echo "## List of documentation for preview:" > index.md
+          echo "## List of sites for previewing changes in PR" > index.md
           for branch in $(find seismo-learn -mindepth 2 -maxdepth 2); do
             echo "- [$branch](https://seismo-learn.org/sitepreview/$branch)" >> index.md
           done
